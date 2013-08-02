@@ -16,8 +16,6 @@ h1, h2, h3, p {
 
 em, a {
   font-style:normal;
-  /* color:#8dbd0c; */
-  /* color: #f57900; */
   color:#ce5c00;
 }
 
@@ -34,7 +32,6 @@ em.green {
 }
 
 em.scarlet {
-	/* color:#ef2929; */
 	color:#cc0000;
 }
 
