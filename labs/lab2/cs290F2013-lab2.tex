@@ -1,0 +1,110 @@
+\input{labspre.tex}
+
+\usepackage[compact]{titlesec}
+
+\begin{document}
+\MYTITLE{Laboratory Assignment Two: Using Vim as an Integrated Development Environment}
+\MYHEADERS{Laboratory Assignment Two}{Due: September 18, 2013}
+
+\section*{Introduction}
+
+Practicing software engineers normally use an integrated development environment (IDE) to manage various tasks
+associated with the design, implementation, and testing of software. In this course, we will use Vim as an IDE.  In this
+laboratory assignment, you will work with your team members to learn about the basic features associated with Vim and
+prepare a tutorial that explains how to use Vim runtime configuration files and plugins to manage tasks in the software
+development life cycle.  Students should program the HTML-based tutorial slides using Vim.
+
+\section*{Learning the Basics of Vim}
+
+Before you start to use Vim during this laboratory assignment, you may want to review some of the reason why people like
+to use this text editor, as explained at \url{http://usevim.com/2012/10/26/why-vim/}.  When you are finished learning
+about some of the reasons behind using Vim, you can start to use the Vim text editor in a terminal window or the GVim
+text editor in a stand-alone window.  Please work with your team members to identify, learn, and document some of the
+basic features that are offered by Vim.  For instance, make sure that you know how to perform the following actions.
+Students are encouraged to learn how to use Vim with key commands.
+
+\begin{enumerate}
+
+	\item Open, close, and save files in windows or tabs
+
+	\item Move to the beginning and end of a file
+
+	\item Navigate to specific lines and columns within a file
+
+	\item Enter and exit command mode
+
+	\item Enter and exit insert and append mode
+
+	\item Select line(s) of text in visual mode
+
+	\item Copy, paste, and delete lines of text
+
+	\item Undo the result of a previous command
+
+	\item Search for and replace specific words in a file 
+
+	\item Additional features that your team deems to be useful
+
+\end{enumerate}
+
+Since we will be using Vim throughout the semester, please make sure that you can easily invoke all of the editor's most
+important commands.  You should take notes and screenshots to demonstrate that your team understands how to use basic
+Vim commands.  Then, your team members must work together to create a simple presentation that explains these commands. 
+
+\section*{Using Runtime Configuration Files}
+
+It is very easy to configure Vim by writing VimScript in your {\tt .vimrc} and {\tt .gvimrc} files.  To complete the
+next phase of the assignment you should download the file
+\url{http://www.cs.allegheny.edu/~gkapfham/teach/cs290f2013/labs/lab2/provide/vim-cs290F2013.tar.gz}.  After saving this
+file to the root of your home directory, you should decompress it using the {\tt tar} command in your terminal window.
+Now, please restart Vim.  Do you see that the color scheme is different? If you would like, you can customize the color
+scheme by using the ``Edit'' and ``Color Scheme'' menus. 
+
+What other features have now been added to Vim?  To learn more about how I have configured Vim for use in Computer
+Science 290 Fall 2013, you should study the VimScript in the {\tt .vimrc} and {\tt .gvimrc} files.  Make sure that you
+and your team members understand these configuration files.
+
+\section*{Using Plugins to Extend Vim}
+
+We will use a variety of Vim plugins to ensure that Vim can operate as a full-fledged integrated development environment
+when you complete the laboratory assignments and the final project.  In this phase of the assignment, you are
+responsible for learning how to use all of the plugins in the following list.  Next, you should prepare a tutorial that 
+explains the inputs, outputs, and behavior of the key features offered by the each plugin.  Finally, you should learn
+more about how Vim supports the installation of plugins through the use of either Vundle or VAM.
+
+\begin{enumerate}
+
+	\item fugitive
+
+	\item ctrlp.vim
+
+	\item vim-session
+
+	\item tagbar
+
+	\item gitv
+
+\end{enumerate}
+
+\section*{Summary of the Required Deliverables}
+
+This assignment invites your team to submit one printed version of a tutorial that contains:
+
+\begin{enumerate}
+	
+	\item A description of the basic features associated with the Vim text editor
+
+	\item A description of how Vim uses runtime configuration files
+
+	\item A complete introduction to the use of Vim plugins 
+
+\end{enumerate}
+
+You must also ensure that the instructor has read access to your Bitbucket repository that is named according to the
+convention {\tt cs290F2013-lab2-team{\em k}}, with {\tt {\em k}} representing the number of your assigned team. 
+Each team should submit both the source code and the browser-rendered version of their slides.  At the start of the next
+laboratory session, team 1 will present the basics of using Vim, team 2 will explain the use of runtime configuration
+files, and teams 3 through 7 will each demonstrate the use of one plugin.  Please see the instructor if you would like to
+print your tutorial slides in color or you have questions about the presentations that you will give next week.
+
+\end{document}
