@@ -66,6 +66,28 @@ at \url{http://ant.apache.org/} to perform automated compilation and testing of 
 	:Ant test} to run the test suite.  Finally, do not forget to run the {\tt :Ant clean} command. What output do you
 	see when you run these commands? Please see the instructor if these commands do not work correctly.
 
+Practicing software engineers commonly use test suites to identify defects in and establish a confidence in the
+correctness of their programs.  You can run the tests for the Kinetic system by running the {\tt :Ant test} command.
+What output does the test suite produce?  Do the test cases find a bug in the Kinetic program?  Of course, it is very
+important to evaluate the quality of the test suite that you implement.  Under the assumption that it is not possible to
+find bugs in code that has not been executed, software engineers commonly use code coverage analysis to evaluate the
+quality of the test suite.  Once again, we can use Vim and the {\tt :Ant coverage} command to run the JaCoCo coverage
+monitoring tool.  After learning more about JaCoCo by visiting \url{http://www.eclemma.org/jacoco/}, you should load the
+coverage report in the {\tt kinetic/bin/site/jacoco/AllTests/edu.allegheny.kinetic/} directory to determine if Kinetic
+has a good test suite.  How much of the code does {\tt KineticTest} cover?  Is this an acceptable score?
+
+If you carefully studied the Kinetic.java file, you will have noticed that it contains a defect! In light of the fact
+that this program has a test suite with tests that always pass, it is alarming to note the existence of this bug. 
+Can you write a test case that will reveal this defect? Can you fix the bug?  Finally, you should use Vim and Eclim to
+complete the following implementation tasks:
+
+\vspace*{-.1in}
+\begin{enumerate}
+	\item Add a simple command-line interface that will allow a user to perform velocity computations
+	\item Create a build.xml target that will allow Kinetic to be called with the {\tt :Ant kinetic} command
+	\item Add comments to all of the Java classes and methods in Kinetic, KineticTest, and AllTests
+\end{enumerate}
+
 \section*{Summary of the Required Deliverables}
 
 This assignment invites your team to submit one printed version of the following files:
@@ -74,12 +96,13 @@ This assignment invites your team to submit one printed version of the following
 	
 	\item A description of the input(s), output(s), and behavior of the basic Eclim commands 
 	\item A description of the output(s) and behavior of Vim's implementation and testing commands
-	\item 
+	\item The coverage report produced by the JaCoCo coverage analysis tool
+	\item A discussion of the defect that you found in the Kinetic Java class
 
 \end{enumerate}
 
 You must also ensure that the instructor has read access to your Bitbucket repository that is named according to the
 convention {\tt cs290F2013-lab3-team{\em k}}, with {\tt {\em k}} representing the number of your assigned team. 
-Each team should submit both the source code.
+Each team should submit both the source code \ldots !
 
 \end{document}
