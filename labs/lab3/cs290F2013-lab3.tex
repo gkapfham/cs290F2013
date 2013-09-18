@@ -11,10 +11,10 @@
 While it is possible to implement and test Java program in Vim without the use of any additional plugins, it is often
 useful to extend Vim with a plugin called Eclim.  As described at \url{http://eclim.org/}, Eclim is a plugin that makes
 it possible to access the features of Eclipse through Vim.  This means that you can program in Vim and use Eclipse
-features such as code completion, searching, validation, and compilation. In this laboratory assignment, you will work
-with your team members to learn how to use the basic features associated with Eclim.  Then, leveraging your knowledge of
-Git, Vim, and Eclim, you will implement a test suite and user interface for a small Java program.  Finally, you will 
-give a demonstration of your working test suite and program.
+features that support the completion, searching, validation, and compilation of source code. In this laboratory
+assignment, you will work with your team members to learn how to use the basic features associated with Eclim.  Then,
+leveraging your knowledge of Git, Vim, and Eclim, you will implement a test suite and user interface for a small Java
+program.  In next week's session, you will publicly demonstrate your test suite and program.
 
 \section*{Learning the Basics of Eclim}
 
@@ -29,6 +29,8 @@ use this plugin.  In particular, make sure you can use:
 	\item {\tt :ProjectInfo}
 	\item {\tt :JavaDocComment}
 	\item {\tt :JavaFormat}
+	\item {\tt :JavaImport}
+	\item {\tt :JavaSearch}
 	\item Code completion with CTRL-x, CTRL-u 
 \end{enumerate}
 
@@ -40,10 +42,11 @@ should ask the instructor to share the Bitbucket repository with them. Once the 
 dashboard, you should use a terminal to execute this command in an appropriate directory: {\tt git clone
 git@bitbucket.org:gkapfham/kinetic.git}.
 
-Once you have finishing cloning the repository, please take some time to study the directory structure.  What files do
+Once you have finishing cloning the repository, please take some time to study the directory structure.  What files did
 you find? What important aspects of the directory structure do you notice?  At this point, you should examine the
-.eclimrc\_k file that is responsible for configuring Eclim to find Kinetic project that is this assignment's focus.
-Please use Vim to change the {\tt sgi.instance.area.default} variable so that it points to directory containing the Git repository. 
+.eclimrc\_k file that is responsible for configuring Eclim to find the Kinetic project that is this assignment's focus.
+Please use Vim to change the {\tt sgi.instance.area.default} variable so that it points to directory containing the Git
+repository. 
 
 Now, you are ready to run the Eclim daemon called {\tt eclimd}.  Using the {\tt which} command in your terminal, find
 out where this command was previously installed on your workstation.  Once you have verified that {\tt eclimd} is
@@ -57,24 +60,35 @@ that you understand the provided methods. Once you understand both the build fil
 use the {\tt :PingEclim} command to make sure that GVim can connect to the Eclim daemon.  If you see debugging output
 showing the current version of both Eclim and Eclipse, then you can issue the {\tt :ProjectCreate} command in GVim to
 create an Eclipse project for Kinetic.  Once the project was successfully created, you can run {\tt :ProjectList}
-and {\tt :ProjectLInfo} to ensure that you properly configured Eclim. 
+and {\tt :ProjectInfo} to ensure that you properly initialized Eclim. 
  
 Since Vim is already configured to operate as an integrated development environment, it contains features that support
 the compilation and testing of your Java source code.  For instance, we can use the Apache Ant build system, described
-at \url{http://ant.apache.org/} to perform automated compilation and testing of our program. If you type {\tt :Ant
+at \url{http://ant.apache.org/}, to perform automated compilation and testing of our program. If you type {\tt :Ant
 	compile} you can run the Java compiler for the three Java classes that are part of the project.  Next, run the {\tt
-	:Ant test} to run the test suite.  Finally, do not forget to run the {\tt :Ant clean} command. What output do you
-	see when you run these commands? Please see the instructor if these commands do not work correctly.
+:Ant test} to run the test suite.  Finally, do not forget to run the {\tt :Ant clean} command. What output do you see
+when you use these commands? Please see the instructor if these commands do not work correctly.
+
+\section*{Performing Test Coverage Monitoring}
 
 Practicing software engineers commonly use test suites to identify defects in and establish a confidence in the
 correctness of their programs.  You can run the tests for the Kinetic system by running the {\tt :Ant test} command.
 What output does the test suite produce?  Do the test cases find a bug in the Kinetic program?  Of course, it is very
 important to evaluate the quality of the test suite that you implement.  Under the assumption that it is not possible to
-find bugs in code that has not been executed, software engineers commonly use code coverage analysis to evaluate the
-quality of the test suite.  Once again, we can use Vim and the {\tt :Ant coverage} command to run the JaCoCo coverage
-monitoring tool.  After learning more about JaCoCo by visiting \url{http://www.eclemma.org/jacoco/}, you should load the
-coverage report in the {\tt kinetic/bin/site/jacoco/AllTests/edu.allegheny.kinetic/} directory to determine if Kinetic
-has a good test suite.  How much of the code does {\tt KineticTest} cover?  Is this an acceptable score?
+find bugs in code that has not been executed, software engineers commonly use code coverage to evaluate the quality of
+the tests.  
+
+Once again, we can use Vim and the {\tt :Ant coverage} command to run the JaCoCo coverage monitoring tool.  After
+learning more about JaCoCo by visiting \url{http://www.eclemma.org/jacoco/}, you should load the coverage report in the
+{\tt kinetic/bin/site/jacoco/AllTests/edu.allegheny.kinetic/} directory to determine if Kinetic has a good test suite.
+How much of the code does {\tt KineticTest} cover?  Is this an acceptable score?  As you continue to repair the Kinetic
+program and add new features and test cases, you should regularly use JaCoCo to calculate the coverage of your test
+suite.  If you notice that you have code or conditional logic branches that are not covered, you should write additional
+test cases to cover this code.  Please make sure that you submit the initial and final coverage report for Kinetic
+(i.e., you must turn in the coverage report that you produced before modifying Kinetic and then the report that you
+created for the final version of the program).
+
+\section*{Fixing and Extending the Program}
 
 If you carefully studied the Kinetic.java file, you will have noticed that it contains a defect! In light of the fact
 that this program has a test suite with tests that always pass, it is alarming to note the existence of this bug. 
