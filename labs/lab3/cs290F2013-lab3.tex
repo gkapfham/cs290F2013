@@ -23,12 +23,12 @@ using Eclim's Java-based features in Vim, you should study \url{http://eclim.org
 use this plugin.  In particular, make sure you can use:
 
 \begin{enumerate}
-	\item :PingEclim
-	\item :ProjectCreate
-	\item :ProjectList
-	\item :ProjectInfo
-	\item :JavaDocComment
-	\item :JavaFormat
+	\item {\tt :PingEclim}
+	\item {\tt :ProjectCreate}
+	\item {\tt :ProjectList}
+	\item {\tt :ProjectInfo}
+	\item {\tt :JavaDocComment}
+	\item {\tt :JavaFormat}
 	\item Code completion with CTRL-x, CTRL-u 
 \end{enumerate}
 
@@ -41,7 +41,24 @@ dashboard, you should use a terminal to execute this command in an appropriate d
 git@bitbucket.org:gkapfham/kinetic.git}.
 
 Once you have finishing cloning the repository, please take some time to study the directory structure.  What files do
-you find? What important aspects of the directory structure do you notice?
+you find? What important aspects of the directory structure do you notice?  At this point, you should examine the
+.eclimrc\_k file that is responsible for configuring Eclim to find Kinetic project that is this assignment's focus.
+Please use Vim to change the {\tt sgi.instance.area.default} variable so that it points to directory containing the Git repository. 
+
+Now, you are ready to run the Eclim daemon called {\tt eclimd}.  Using the {\tt which} command in your terminal, find
+out where this command was previously installed on your workstation.  Once you have verified that {\tt eclimd} is
+installed on your machine, run {\tt eclimd} with the {\tt -f} flag to specify that the .eclimrc\_k file should be used
+as the runtime configuration file for Eclim.  After running this program, what output do you see in the terminal window?
+
+If {\tt eclimd} is running correctly, then you can type {\tt gvim} in a terminal window from the {\tt kinetic}
+directory. Using CTRL-P, load the build.xml file and study the rules that it provides.  Next, use CTRL-P to load the
+Kinetic.java, KineticTest.java, and AllTests.java files.  Again, please carefully review these Java classes to make sure
+that you understand the provided methods. Once you understand both the build file and the Java classes, you should 
+use the {\tt :PingEclim} command to make sure that GVim can connect to the Eclim daemon.  If you see debugging output
+showing the current version of both Eclim and Eclipse, then you can issue the {\tt :ProjectCreate} command in GVim to
+create an Eclipse project for Kinetic.  Once the project was successfully created, you can run {\tt :ProjectList}
+and {\tt :ProjectLInfo} to ensure that you properly configured Eclim. 
+ 
 
 \section*{Summary of the Required Deliverables}
 
