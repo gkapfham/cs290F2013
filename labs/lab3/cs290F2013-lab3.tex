@@ -59,6 +59,12 @@ showing the current version of both Eclim and Eclipse, then you can issue the {\
 create an Eclipse project for Kinetic.  Once the project was successfully created, you can run {\tt :ProjectList}
 and {\tt :ProjectLInfo} to ensure that you properly configured Eclim. 
  
+Since Vim is already configured to operate as an integrated development environment, it contains features that support
+the compilation and testing of your Java source code.  For instance, we can use the Apache Ant build system, described
+at \url{http://ant.apache.org/} to perform automated compilation and testing of our program. If you type {\tt :Ant
+	compile} you can run the Java compiler for the three Java classes that are part of the project.  Next, run the {\tt
+	:Ant test} to run the test suite.  Finally, do not forget to run the {\tt :Ant clean} command. What output do you
+	see when you run these commands? Please see the instructor if these commands do not work correctly.
 
 \section*{Summary of the Required Deliverables}
 
@@ -67,7 +73,7 @@ This assignment invites your team to submit one printed version of the following
 \begin{enumerate}
 	
 	\item A description of the input(s), output(s), and behavior of the basic Eclim commands 
-	\item 
+	\item A description of the output(s) and behavior of Vim's implementation and testing commands
 	\item 
 
 \end{enumerate}
