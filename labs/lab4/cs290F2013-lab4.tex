@@ -14,7 +14,7 @@ the key concepts associated with software engineering.  In this assignment, you 
 the software development life cycle and employ the concepts that we have studied in class  to implement and test a
 program. Two weeks from now, you will present your solution and demonstrate your test suite and program.
 
-\section*{Software Development Assignment}
+\section*{Specifying the Requirements}
 
 You are responsible for implementing a data generator that should take a list of numbers as input and produce a list of
 lists as output.  You are given the following specification for the data generator.
@@ -23,6 +23,18 @@ lists as output.  You are given the following specification for the data generat
 For an input list of numbers $L$, the data generator must produce all of the lists that can be obtained by swapping two
 adjacent items in $L$.
 \end{quote} 	
+
+\noindent
+For the list $L = \{1, 2, 3, 4\}$, the customer thinks that the generator should produce $L=\{L_1, \ldots, L_6\}$ 
+
+\begin{itemize}
+	\item[] $L_1 = \{2, 1, 3, 4\}$
+	\item[] $L_2 = \{3, 2, 1, 4\}$
+	\item[] $L_3 = \{4, 2, 3, 1\}$
+	\item[] $L_3 = \{1, 3, 2, 4\}$
+	\item[] $L_4 = \{1, 4, 3, 2\}$
+	\item[] $L_6 = \{1, 2, 4, 3\}$
+\end{itemize} 
 
 \section*{Summary of the Required Deliverables}
 
