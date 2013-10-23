@@ -8,11 +8,31 @@
 
 \section*{Introduction}
 
-In the previous laboratory assignments, you have been learning about the tools that we will use this semester to
-specify, design, implement, test, and document Java programs. Moreover, our past class session have introduced you to
-the key concepts associated with software engineering.  In this assignment, you and your team will follow the phases of
-the software development life cycle and employ the concepts that we have studied in class  to implement and test a
-program. Two weeks from now, you will present your solution and demonstrate your test suite and program.
+In the previous laboratory assignments, you have learned about the tools that we will use throughout this semester to
+specify, design, implement, test, and document Java programs.  You have also had several experiences with working in
+progressively larger teams to complete the phases of the software life cycle.  Moreover, our past class sessions have
+introduced you to the key concepts associated with software engineering, with a recent focus on the elicitation of
+software requirements.  In this assignment, you and your team will follow the phases of the software development life
+cycle and employ the concepts that we have studied in class to implement and test a program that can be used to
+efficiently determine how to release the next version of a program. One week from now, you will describe and
+demonstrate your next release planner.
+
+\section*{Next Release Planning}
+
+Managers often use a software process in order to make decisions about when to release an application.  If you were a
+manager and you were charged with determining which features will be a part of the next release of a program you could
+use a next release planner to efficiently make an intelligent decision.  For this laboratory assignment, you should
+assume that a next release planner accepts as input for each new requirement $R_j$, (i) $C_j$, the cost associated with
+implementing the requirement and (ii) $B_j$, the monetary benefit for a program that contains this feature.
+
+In order to determine which requirements will be part of the next release of a software application, a manager must
+choose from the requirements $R = \{ R_1, \ldots, R_n \}$ and ensure that (i) the implementation tasks are completed at
+no more than the total fixed cost $C$ and (ii) the chosen requirements maximize the total monetary benefit that the
+company will see when it releases the software product.  Given cost and benefit information for each $R_j$ and the fixed
+cost $C$, a next release planner will pick which requirements are included in the next release of the program.
+
+Next release planning is equivalent to a well-known NP-complete combinatorial optimization problem.  What is the
+equivalent problem? What are the heuristics for solving this problem?
 
 \section*{Specifying the Requirements}
 
