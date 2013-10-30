@@ -17,7 +17,22 @@ characterize programs and test suites.  One week from now, you will present your
 
 \section*{Calculating Design Quality Metrics with JDepend}
 
-\section*{Observations About the Requirements}
+After you have written a requirements document for your system and completed the description of the architecture, you
+must create a design for your program.  Of course, it is important to evaluate the quality of your design.  If you
+already have an implementation of a program and you want to evaluate the quality of its design, you can use a tool
+called JDepend.  You can learn more about JDepend by visiting \url{http://clarkware.com/software/JDepend.html}. What are
+the design quality metrics that JDepend calculates? What are the meanings of these metrics? How can you use these
+metrics to better understand and modify the design of your Java programs? As one of the deliverables for this
+assignment, your team should use \LaTeX\ to prepare a document that contains formal definitions and equations that
+describe all of the design quality metrics. 
+
+Once you and your team have investigated and discussed the features provided by JDepend, you should pick two separate
+systems that have been previously implemented by members of your team. Now, copy the source code from these two projects
+--- and any other files that your team deem to be relevant --- to the version control repository that you will use for this
+project.  Next, add rules to each project's Ant build system that can run the JDepend analysis on the source code. What
+does the output of JDepend tell you about the quality of each project's design?
+
+\section*{Source Code Measurement with JavaNCSS}
 
 \section*{Summary of the Required Deliverables}
 
@@ -26,14 +41,14 @@ This assignment invites your team to submit one printed version of the following
 \begin{enumerate}
 	\itemsep0em 
 	\item A description of and justification for your team's chosen organization, roles, and tool support
-	\item A document that clearly specifies the inputs, outputs, and behavior of the next release planner
-	\item A document that explains the planner's design, with details about classes and methods
-	\item All of the implementation artifacts (e.g., build system, source code, and the coverage report) 
+	\item A document that clearly explains the meaning of JDepend's design quality metrics 
+	\item An analysis of the values of design quality metrics for two previously implemented systems 
+	\item Any modified implementation artifacts (e.g., build system and source code) 
 \end{enumerate}
 \vspace*{-.1in}
 
 You must also ensure that the instructor has read access to your Bitbucket repository that is named according to the
-convention {\tt cs290F2013-lab5-team{\em k}}, with {\tt {\em k}} representing the number of your assigned team.  Your
+convention {\tt cs290F2013-lab6-team{\em k}}, with {\tt {\em k}} representing the number of your assigned team.  Your
 repository should contain all of the deliverables that you produced during the completion of this assignment.  Please
 see the instructor if you have any questions.
 
