@@ -13,13 +13,13 @@ semester to specify, design, implement, test, and document Java programs.  You h
 working in progressively larger teams to complete the phases of the software life cycle, with a recent focus on the
 elicitation of software requirements and the planning of software projects.  In this assignment, you and your team will
 install, configure, and use software tools that automatically calculate design and implementation metrics that
-characterize programs and test suites.  One week from now, you will present your findings from your analyses.  
+characterize programs and test suites.  One week from now, you will present the findings from your analyses.  
 
 \section*{Calculating Design Quality Metrics with JDepend}
 
 After you have written a requirements document for your system and completed the description of the architecture, you
 must create a design for your program.  Of course, it is important to evaluate the quality of your design.  If you
-already have an implementation of a program and you want to evaluate the quality of its design, you can use a tool
+already have a (partial) implementation of a program and you want to evaluate the quality of its design, you can use a tool
 called JDepend.  You can learn more about JDepend by visiting \url{http://clarkware.com/software/JDepend.html}. What are
 the design quality metrics that JDepend calculates? What are the meanings of these metrics? How can you use these
 metrics to better understand and modify the design of your Java programs? As one of the deliverables for this
@@ -31,11 +31,11 @@ systems that have been previously implemented by members of your team. Now, copy
 --- and any other files that your team deem to be relevant --- to the version control repository that you will use for
 this project.  After downloading and installing JDepend, you should add rules to each project's Ant build system that
 can run the JDepend analysis on the byte code. What does the output of JDepend tell you about the quality of each
-project's design? Do the chosen programs have good designs?
+project's design? Do the chosen programs have good designs? Why or why not?
 
 \section*{Source Code Measurement with JavaNCSS}
 
-As you are implementing your program, it is important to regularly calculate metrics that characterize the quality of
+As you are programming your system, it is important to regularly calculate metrics that characterize the quality of
 your implementation.  JavaNCSS is a software tool that can automatically scan your Java source code and report
 information about the number of non-commented source code statements and the cyclomatic complexity.  You can learn more
 about JavaNCSS by visiting \url{http://www.kclee.de/clemens/java/javancss/}. After reading the Web site for JavaNCSS,
@@ -54,21 +54,21 @@ program itself? How much of the source code is devoted to the test suite?
 \section*{Analyzing Real-World Programs}
 
 After your team finished the analysis of the two projects that you completed in previous laboratory assignments, you
-should identify one or more open-source Java projects that you download.  To ensure that it is easier to analyze a
+should identify one or more open-source Java projects that you can download.  To ensure that it is easier to analyze a
 project with both JDepend and JavaNCSS, you should specifically look for ones that contain Ant build systems. After
 picking the projects that you want to further analyze, you can create separate directories for them in your Bitbucket
 repository for this laboratory assignment.  Now, modify the build system of your project(s) so that you can use JDepend
 and JavaNCSS to perform an automated analysis of the design and implementation, respectively.  What interesting trends
-can you find in the design and implementation quality metrics for your chosen open-source program(s)?  How to the values
+can you find in the design and implementation quality metrics for your chosen open-source program(s)?  How do the values
 of these metrics for the open-source programs compare to the values for the projects that you implemented in this class?
 What can you learn about ways to improve the design and implementation of your Java programs?
 
 \section*{Presentation of Important Insights}
 
-Once you have completed all of the previous phases of this assignment, you should prepare a short five minute
+Once you have completed all of the previous phases of this assignment, you should prepare a short five to ten minute
 presentation that your team will give at the start of the next laboratory session. Using the HTML-based presentation
 format that we used in previous laboratory assignments, you should prepare slides that highlight some of the most
-important insights that you learned from the automated analysis of your chosen Java programs.
+important insights that you learned from the automated analysis of the design and implementation of your chosen Java programs.
 
 \section*{Summary of the Required Deliverables}
 
@@ -79,9 +79,9 @@ This assignment invites your team to submit one printed version of the following
 	\item A description of and justification for your team's chosen organization, roles, and tool support
 	\item A document that clearly explains the meaning of JDepend's design quality metrics 
 	\item An analysis of the values of design quality metrics for two previously implemented systems 
-	\item A document that clearly explains the meaning of metrics calculated by JavaNCSS
+	\item A document that clearly explains the meaning of the metrics calculated by JavaNCSS
 	\item An analysis of the values of the implementation metrics for the two systems that you chose
-	\item Any modified implementation artifacts (e.g., build system and source code) 
+	\item Modified implementation artifacts of your chosen systems (e.g., build system and source code) 
 	\item The slides of the presentation that you will give at the start of the next laboratory session
 \end{enumerate}
 \vspace*{-.1in}
