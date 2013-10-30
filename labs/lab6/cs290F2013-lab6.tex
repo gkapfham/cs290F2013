@@ -28,11 +28,24 @@ describe all of the design quality metrics.
 
 Once you and your team have investigated and discussed the features provided by JDepend, you should pick two separate
 systems that have been previously implemented by members of your team. Now, copy the source code from these two projects
---- and any other files that your team deem to be relevant --- to the version control repository that you will use for this
-project.  Next, add rules to each project's Ant build system that can run the JDepend analysis on the source code. What
-does the output of JDepend tell you about the quality of each project's design?
+--- and any other files that your team deem to be relevant --- to the version control repository that you will use for
+this project.  After downloading and installing JDepend, you should add rules to each project's Ant build system that
+can run the JDepend analysis on the byte code. What does the output of JDepend tell you about the quality of each
+project's design? Do the chosen programs have good designs?
 
 \section*{Source Code Measurement with JavaNCSS}
+
+As you are implementing your program, it is important to regularly calculate metrics that characterize the quality of
+your implementation.  JavaNCSS is a software tool that can automatically scan your Java source code and report
+information about the number of non-commented source code statements and the cyclomatic complexity.  You can learn more
+about JavaNCSS by visiting \url{http://www.kclee.de/clemens/java/javancss/}. After reading the Web site for JavaNCSS,
+you should search for papers in the ACM Digital Library, available at \url{http://dl.acm.org/}, that formally describe
+the meaning of metrics calculated by JavaNCSS, such as cyclomatic complexity. As one of the deliverables for this assignment, your team should use \LaTeX\ to write a document that contains formal
+definitions and equations that explain all of the metrics calculated by JavaNCSS.  
+
+Once all of the members of your team understand the metrics calculated by JavaNCSS, you should download and install
+this tool.  As you did with JDepend, now you must add rules to each project's build system that can run JavaNCSS on the
+source code. 
 
 \section*{Summary of the Required Deliverables}
 
