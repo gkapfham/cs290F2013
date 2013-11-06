@@ -29,11 +29,70 @@ visiting the Web site \url{http://iai.mathematik.uni-ulm.de/en/research/major.ht
 should continue to learn about MAJOR by studying the provided tutorial and the papers referenced by the tutorial.  Once
 you understand the basics of MAJOR, you should ask the instructor to give you read access to MAJOR's Git repository
 hosted on Bitbucket. Once the you have access to the repository, you should type {\tt git clone
-git@bitbucket.org:gkapfham/major-cs290f2013.git} in your terminal window.  Now, create your own Git repository that
-follows the naming convention that we use for laboratory assignments and move all of MAJOR's code into it. 
+git@bitbucket.org:gkapfham/major-cs290f2013.git} in your terminal window.  Now, create your a Git repository for your
+team that follows the naming convention that we use for laboratory assignments and move all of MAJOR's code into it. 
 
+In the MAJOR's main directory you should see the scripts {\tt ant}, {\tt javac}, and {\tt mmlc}.  In order to continue
+with this assignment, you will need to use the {\tt chmod} command to make all of the scripts executable.  Once these
+scripts are executable, you should go into the {\tt example/ant} directory and also make the {\tt run.sh} script
+executable.  Now, you can study the build.xml file provided with this example. What targets do you find in this file? If
+you wanted to perform mutation analysis of a Java program, in what order would you suggest running these targets? Why?
 
+Go into the {\tt src/triangle} directory and study the Triangle.java file that contains a {\tt Triangle} class with a
+{\tt public static Type classify(int a, int b, int c)} method.  What is the purpose of this method? How does this method
+work?  You should also notice that Triangle.java has a {\tt public static enum Type}.  What is the purpose of {\tt
+Type}? Once you have carefully studied this program and discussed it with the members of your team, write a {\tt main}
+method that shows how to call the {\tt classify} method with at least five different inputs. What output does Triangle
+produce? 
 
+To ensure that your mutation analysis results match those found in the provided tutorial, you should now comment out the
+{\tt main} method that you previously implemented; please uncomment this method before you print your required
+deliverables. Once you have returned Triangle.java to its original state, you should find and study the TestSuite.java
+file.  How many test cases does this suite have? What do the test cases do? Make sure that you fully understand these tests.
+
+Now, you are ready to execute the {\tt run.sh} script in the {\tt example/ant} directory.  When you run the script, you
+should see the output that is the same as what you find in the tutorial.  If you do not see this type of output, then
+please see the instructor. Working with your team members, carefully study the output from mutation analysis.  How many
+mutants were killed? How many mutants are still alive? What do these results tell us about the quality of the tests?
+
+Let's examine MAJOR's output in greater detail. Look in the kill.csv file and find a mutant that was killed by the test
+cases (i.e., a mutant with the ``FAIL'' annotation). Next, examine the mutants.log file and determine the source code
+manipulation to which this mutant corresponds.  What type of test input will kill this mutant?  Finally, you should
+repeat these steps for a mutant that remains alive after running the test suite (i.e., a mutant with the ``LIVE''
+annotation). How did MAJOR modify the source code to produce this mutant? Why are the test cases not capable of killing
+this mutant?  Can you devise a test case that will kill this or other live mutants?
+
+% \begin{verbatim}
+% mutation.test:
+%      [echo] Running mutation analysis ...
+%     [junit] MAJOR: Mutation analysis enabled
+%     [junit] MAJOR: ------------------------------------------------------------
+%     [junit] MAJOR: Run 1 ordered test to verify independency
+%     [junit] MAJOR: ------------------------------------------------------------
+%     [junit] MAJOR: Preprocessing took 0.09 seconds
+%     [junit] MAJOR: ------------------------------------------------------------
+%     [junit] MAJOR: Mutants covered:        79
+%     [junit] MAJOR: ------------------------------------------------------------
+%     [junit] MAJOR: Run mutation analysis with 1 individual test
+%     [junit] MAJOR: ------------------------------------------------------------
+%     [junit] MAJOR: 1/1 - triangle.test.TestSuite$null (5ms / 79):
+%     [junit] MAJOR: 650 (70 / 79 / 79) -> AVG-RTPM: 8ms
+%     [junit] MAJOR: Mutants killed / live: 70 (70-0-0) / 9
+%     [junit] MAJOR: ------------------------------------------------------------
+%     [junit] MAJOR: Summary:
+%     [junit] MAJOR: 
+%     [junit] MAJOR: Total runtime:  0.7 seconds
+%     [junit] MAJOR: Mutation score: 88.61%
+%     [junit] MAJOR: Mutant executions: 79
+%     [junit] MAJOR: Mutants killed / live: 70 (70-0-0) / 9
+%     [junit] MAJOR: ------------------------------------------------------------
+%     [junit] MAJOR: Export runtime results (to results.csv)
+%     [junit] MAJOR: Export mutant kill details (to kill.csv)
+% 
+% BUILD SUCCESSFUL
+% Total time: 1 second
+% \end{verbatim}
+% 
 \section*{Summary of the Required Deliverables}
 
 This assignment invites your team to submit one printed version of the following files:
@@ -41,7 +100,7 @@ This assignment invites your team to submit one printed version of the following
 \begin{enumerate}
 	\itemsep0em 
 	\item A description of and justification for your team's chosen organization, roles, and tool support
-	\item A listing of the steps that you will take during the demonstration of MAJOR
+	\item A listing of the steps that you will take during next week's demonstration of MAJOR
 \end{enumerate}
 \vspace*{-.1in}
 
