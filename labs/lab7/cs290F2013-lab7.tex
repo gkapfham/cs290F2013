@@ -19,20 +19,21 @@ demonstrate to the instructor that you are able to perform mutation analysis.
 \section*{Mutation Analysis with MAJOR}
 
 Mutation analysis purposefully inserts hypothetical faults into the source code of your program and then checks to see
-if the test cases can find these faults.  If the at least one test case fails after the insertion of the mutant, then
+if the test cases can find these faults.  If at least one test case fails after the insertion of the mutant, then
 the tests can find this type of fault and we say that the mutant was killed.  However, it is also possible that the
 tests will not be capable of finding the mutation fault. What does it mean if the mutant is alive after the execution of
 the test suite?
 
 MAJOR is a mutation analysis tool that integrates into the standard Java compiler. You can learn more about MAJOR by
-visiting the Web site \url{http://iai.mathematik.uni-ulm.de/en/research/major.html}.  After visiting this Web site, you
+visiting the Web site \url{http://iai.mathematik.uni-ulm.de/en/research/major.html}.  After examining this Web site, you
 should continue to learn about MAJOR by studying the provided tutorial and the papers referenced by the tutorial.  Once
-you understand the basics of MAJOR, you should ask the instructor to give you read access to MAJOR's Git repository
+you understand the concepts behind MAJOR, you should ask the instructor to give you read access to MAJOR's Git repository
 hosted on Bitbucket. Once the you have access to the repository, you should type {\tt git clone
 git@bitbucket.org:gkapfham/major-cs290f2013.git} in your terminal window.  Now, create your a Git repository for your
-team that follows the naming convention that we use for laboratory assignments and move all of MAJOR's code into it. 
+team that follows the naming convention that we use for laboratory assignments and move all of the files associated with
+MAJOR into it. 
 
-In the MAJOR's main directory you should see the scripts {\tt ant}, {\tt javac}, and {\tt mmlc}.  In order to continue
+In MAJOR's main directory you should see the scripts {\tt ant}, {\tt javac}, and {\tt mmlc}.  In order to continue
 with this assignment, you will need to use the {\tt chmod} command to make all of the scripts executable.  Once these
 scripts are executable, you should go into the {\tt example/ant} directory and also make the {\tt run.sh} script
 executable.  Now, you can study the build.xml file provided with this example. What targets do you find in this file? If
@@ -46,12 +47,13 @@ method that shows how to call the {\tt classify} method with at least five diffe
 produce? 
 
 To ensure that your mutation analysis results match those found in the provided tutorial, you should now comment out the
-{\tt main} method that you previously implemented; please uncomment this method before you print your required
+{\tt main} method that you previously implemented; please uncomment this method before you print the required
 deliverables. Once you have returned Triangle.java to its original state, you should find and study the TestSuite.java
-file.  How many test cases does this suite have? What do the test cases do? Make sure that you fully understand these tests.
+file.  How many test cases does this suite have? How do these test cases work? Make sure that you fully understand these
+tests.
 
 Now, you are ready to execute the {\tt run.sh} script in the {\tt example/ant} directory.  When you run the script, you
-should see the output that is the same as what you find in the tutorial.  If you do not see output lines like those
+should see the output that is the same as what you find in the tutorial.  If you do not see output with lines like those
 below, then please see the instructor. Working with your team members, carefully study the output from mutation
 analysis.  How many mutants were killed? How many mutants are still alive? What do these results tell us about the
 quality of the tests?
@@ -67,8 +69,8 @@ Let's examine MAJOR's output in greater detail. Look in the kill.csv file and fi
 cases (i.e., a mutant with the ``FAIL'' annotation). Next, examine the mutants.log file and determine the source code
 manipulation to which this mutant corresponds.  What type of test input will kill this mutant?  Finally, you should
 repeat these steps for a mutant that remains alive after running the test suite (i.e., a mutant with the ``LIVE''
-annotation). How did MAJOR modify the source code to produce this mutant? Why are the test cases not capable of killing
-this mutant?  Can you devise a test case that will kill this or other live mutants?
+annotation). In what way did MAJOR modify the source code to produce this mutant? Why are the test cases not capable of
+killing this mutant?  Can you devise a test case that will kill this or other live mutants?
 
 \section*{Summary of the Required Deliverables}
 
@@ -77,21 +79,22 @@ This assignment invites your team to submit one printed version of the following
 \begin{enumerate}
 	\itemsep0em 
 	\item A description of and justification for your team's chosen organization, roles, and tool support
-	\item A description of the targets in build.xml and the order they are run in during mutation 
-	\item A modified version of Triangle.java that contains a {\tt main} method for demonstration
-	\item The output from running the modified version of Triangle.java that contains a {\tt main}
-	\item The output from executing the {\tt run.sh} script in the {\tt ant/example} directory
-	\item A detailed analysis of the output produced by the {\tt run.sh} script
-	\item A commentary on at least one live and at least one killed source code mutant
+	\item A description of the targets in build.xml and the order in which they are run during mutation 
+	\item A modified version of Triangle.java that contains a {\tt main} method for demonstration purposes
+	\item The output from running the modified version of Triangle.java that contains a {\tt main} method
+	\item The output from executing the {\tt run.sh} script in the {\tt example/ant} directory
+	\item A detailed analysis of the output produced by the execution of the {\tt run.sh} script
+	\item A thoughtful commentary on at least one live and at least one killed source code mutant
 	\item A listing of the steps that you will take during next week's demonstration of MAJOR
 \end{enumerate}
 \vspace*{-.1in}
 
 You must also ensure that the instructor has read access to your Bitbucket repository that is named according to the
 convention {\tt cs290F2013-lab7-team{\em k}}, with {\tt {\em k}} representing the number of your assigned team.  Your
-repository should contain all of the deliverables that you produced during the completion of this assignment.  Please
-see the instructor if you have any questions. A team can earn extra credit if they successfully apply MAJOR to another
-larger software system. To earn the extra points you must submit an instruction manual that fully explains how to use
-MAJOR to perform mutation analysis on your chosen project.
+repository should contain all of the deliverables that you produced during the completion of this assignment.  A team
+can earn extra credit if they successfully apply MAJOR to another software system (e.g., a system from the last
+laboratory assignment). To earn the extra points you must submit an instruction manual that fully explains how to use
+MAJOR to perform mutation analysis on your chosen project. Please see the instructor if you have any questions. 
+ 
 
 \end{document}
