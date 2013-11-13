@@ -14,7 +14,7 @@ phases of the software life cycle, with a focus on the elicitation of software r
 projects, and the analysis of a project's design, implementation, and test suite.  In this final project assignment you
 will follow the phases of the software development lifecycle to create and release Twitter analytics software.
 
-\section*{Using Twitter}
+\section*{Using the Twitter Service}
 
 Twitter is a microblogging service that allows you to send and receive short, 140-character messages.  While many
 Twitter clients allow you to send and receive tweets and search for trending topics, few give you the ability to search
@@ -25,7 +25,15 @@ interested in search through all of their tweets, Twitter recently announced a m
 your computer, as described at the following Web site \url{https://blog.twitter.com/2012/your-twitter-archive/}.
 However, manually searching through this archive is very cumbersome. 
 
-\section*{Twitter Analytics}
+\section*{Requirements for Twitter Analytics}
+
+For this final project, your team will implement a complete Twitter analytics system.  To start, your program should be
+able to accept as input the Zip file that a Twitter user downloads by following the instructions in the aforementioned
+Web site. Next, your program must parse all of the tweets in the Zip file and store them in a relational database so
+that they can be subject to further analysis. Moreover, your analytics tools must allow the user to connect to the
+Twitter servers and refresh the program's tweet database so that it includes all of the new tweets since the download of
+the Zip file from Twitter. Your system should also allow the user to both specify a new Zip file for reloading into the
+local database and reinitialize the database by clearing out any existing tweets.
 
 \section*{Summary of the Required Deliverables}
 
@@ -34,7 +42,14 @@ This assignment invites your team to submit one printed version of the following
 \begin{enumerate}
 	\itemsep0em 
 	\item A description of and justification for your team's chosen organization, roles, and tool support
-	\item A description of the internal file format inside of a downloaded Twitter archive
+	\item A description of the internal structure of a downloaded Twitter archive
+	\item A description of the format of the file that stores all of the tweets for a single user
+	\item A complete, fully documented software system ready for release on Google Code and including
+	\begin{enumerate}
+		\item A distinctive name and logo
+		\item Easy-to-understand user documentation for display on a Web site
+		\item 
+	\end{enumerate}
 
 \end{enumerate}
 \vspace*{-.1in}
