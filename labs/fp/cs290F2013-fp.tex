@@ -4,20 +4,28 @@
 
 \begin{document}
 \MYTITLE{Final Project Assignment: Implementing and Releasing a Twitter Analytics System}
-\MYHEADERS{Final Project Assignment}{Due: , 2013}
+\MYHEADERS{Final Project Assignment}{Due: December 13, 2013 at 5 pm}
 
 \section*{Introduction} 
 
-Throughout this semester, you learned how to use tools that enable you to to specify, design, implement,
-test, and document Java programs.  You also had several experiences with working in progressively larger teams to
-complete the phases of the software life cycle, with a recent focus on the elicitation of software requirements, the
-planning of software projects, and the analysis of a project's design and implementation.  
+Throughout this semester, you learned how to use tools that enable you to to specify, design, implement, test, and
+document Java programs.  You also had several experiences with working in progressively larger teams to complete the
+phases of the software life cycle, with a focus on the elicitation of software requirements, the planning of software
+projects, and the analysis of a project's design, implementation, and test suite.  In this final project assignment you
+will follow the phases of the software development lifecycle to create and release Twitter analytics software.
 
+\section*{Using Twitter}
 
-In this assignment, you will
-install and use a mutation analysis tool that will help you to determine the quality of a test suite.  During the final
-project, you can use this tool to better gauge how effectively you are testing your code. A week from now, you will
-demonstrate to the instructor that you are able to perform mutation analysis.
+Twitter is a microblogging service that allows you to send and receive short, 140-character messages.  While many
+Twitter clients allow you to send and receive tweets and search for trending topics, few give you the ability to search
+and analyze all of the Tweets that you have sent over the entire time you have used Twitter. If you have tweeted many
+times in the past, it is particularly difficult to implement a Twitter client that downloads your entire history of
+tweets because of the way in which Twitter rate limits its application programming interface.  Since many people are
+interested in search through all of their tweets, Twitter recently announced a mechanism for downloading them all to
+your computer, as described at the following Web site \url{https://blog.twitter.com/2012/your-twitter-archive/}.
+However, manually searching through this archive is very cumbersome. 
+
+\section*{Twitter Analytics}
 
 \section*{Summary of the Required Deliverables}
 
@@ -26,22 +34,15 @@ This assignment invites your team to submit one printed version of the following
 \begin{enumerate}
 	\itemsep0em 
 	\item A description of and justification for your team's chosen organization, roles, and tool support
-	\item A description of the targets in build.xml and the order in which they are run during mutation 
-	\item A modified version of Triangle.java that contains a {\tt main} method for demonstration purposes
-	\item The output from running the modified version of Triangle.java that contains a {\tt main} method
-	\item The output from executing the {\tt run.sh} script in the {\tt example/ant} directory
-	\item A detailed analysis of the output produced by the execution of the {\tt run.sh} script
-	\item A thoughtful commentary on at least one live and at least one killed source code mutant
-	\item A listing of the steps that you will take during next week's demonstration of MAJOR
+	\item A description of the internal file format inside of a downloaded Twitter archive
+
 \end{enumerate}
 \vspace*{-.1in}
 
 You must also ensure that the instructor has read access to your Bitbucket repository that is named according to the
-convention {\tt cs290F2013-lab7-team{\em k}}, with {\tt {\em k}} representing the number of your assigned team.  Your
-repository should contain all of the deliverables that you produced during the completion of this assignment.  A team
-can earn extra credit if they successfully apply MAJOR to another software system (e.g., a system from the last
-laboratory assignment). To earn the extra points you must submit an instruction manual that fully explains how to use
-MAJOR to perform mutation analysis on your chosen project. Please see the instructor if you have any questions. 
+convention {\tt cs290F2013-fp-team{\em k}}, with {\tt {\em k}} representing the number of your assigned team.  Your
+repository should contain all of the deliverables that you produced during the completion of this assignment.  Please
+see the instructor if you have any questions. 
  
 
 \end{document}
