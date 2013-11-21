@@ -117,8 +117,8 @@ you are responsible for checking the white board for status updates.
 \begin{figure}[t]
 	\centering
 	\begin{tabular}{c c}
-		\begin{minipage}{3.4in} \includegraphics[width=3in]{37.png} \vspace*{-.2in} \begin{center}(a)\end{center} \end{minipage} & 
-		\begin{minipage}{3.4in} \includegraphics[width=3in]{45.png} \vspace*{-.2in} \begin{center}(b)\end{center} \end{minipage}
+		\begin{minipage}{3.4in} \includegraphics[width=3in]{45.png} \vspace*{-.2in} \begin{center}(a)\end{center} \end{minipage} & 
+		\begin{minipage}{3.4in} \includegraphics[width=3in]{37.png} \vspace*{-.2in} \begin{center}(b)\end{center} \end{minipage}
  	\end{tabular}
 	\caption{The Evolving Architecture of the JUnit Test Automation Framework.}
 	\label{fig:junit}
@@ -136,12 +136,12 @@ you are responsible for checking the white board for status updates.
 \item ({\bf 3 Points}) What is the architecture of a software system? How is it distinct from the requirements? How is
 	it different than the design of the same software system? 
 
-\item ({\bf 4 Points}) Figure~\ref{fig:junit}(a) and (b) give two diagrams that explain the software
+\item ({\bf 4 Points}) Figure~\ref{fig:junit}(a) and (b) give two diagrams that depict the software
 	architecture of the JUnit testing framework.  Answer the following questions about these diagrams.
 
 	\begin{enumerate}
 		\item One of these diagrams explains an early stage of JUnit's implementation while the other depicts late-stage
-			structure.  Which one is which?
+			structure.  Which one is which? How do you know?
 
 		\item Why do you think the early- and late-stage diagrams look the way that they do?
 	\end{enumerate}
@@ -163,37 +163,27 @@ you are responsible for checking the white board for status updates.
 
 \newpage
 
-\item ({\bf 10 Points}) Research in software architectures has
-  flourished in recent years.  Answer the following questions about
-  software architectures by providing a response for each part.
+\item ({\bf 10 Points}) Research in software architectures has flourished in recent years.  Answer the following
+	questions about software architectures by providing a response for each part.
 
 \begin{enumerate}
 
-% \item ({\bf 2 Points}) Define the term software architecture.  Discuss
-%   some of the advantages to explicitly designing and documenting a
-%   software architecture.
+% \item ({\bf 2 Points}) Define the term software architecture.  Discuss some of the advantages to explicitly designing
+% and documenting a software architecture.
 % 
-\item ({\bf 3 Points}) The {\em shared} repository (or {\em tuple
-  space} or {\em blackboard}) model is one example of a software
-  architecture.  Please draw a diagram that explains how this
-  architecture works.  What is one strength and one weakness of this
-  architecture?
+\item ({\bf 4 Points}) The shared repository (or tuple space or blackboard model is one example of a
+	software architecture.  Please draw a diagram that explains how this architecture works.  What is one strength and
+	one weakness of this architecture?
 
-\item ({\bf 3 Points}) The pipe and filter is another example of a
-  software architecture.  In the context of this architecture, what is
-  the meaning of the terms {\em pipe} and {\em filter}?  Your response
-  to this question should also furnish an example of a pipe and filter
-  architecture in the context of the GNU/Linux command line.
+\item ({\bf 4 Points}) The pipe and filter is another example of a software architecture.  In the context of this
+	architecture, what is the meaning of the terms pipe and filter?  Your response to this question should
+	also furnish an example of a pipe and filter architecture in the context of the GNU/Linux command line.
 
-\item ({\bf 2 Points}) One benefit of the pipe and filter architecture
-  is that it supports the easy analysis of throughput and response
-  time.  Draw two graphs that explain the relationship between {\em
-    throughput} and {\em response time} and the {\em length} of the
-  pipe and filter chain.  The first graph should have the label
-  ``throughput'' on the vertical axis and ``length of the pipe and
-  filter chain'' on the horizontal while the second should have
-  ``response time'' on the vertical and ``length of the pipe and
-  filter chain'' on the horizontal.
+\item ({\bf 2 Points}) One benefit of the pipe and filter architecture is that it supports the analysis of throughput
+	and response time.  Draw and explain two graphs that depict the relationship between throughput and 	response
+	time and the length of the pipe and filter chain.  The first graph should have the label ``throughput'' on the
+	vertical axis and ``length of the pipe and filter chain'' on the horizontal while the second should have ``response
+	time'' on the vertical and ``length of the pipe and filter chain'' on the horizontal.
 
 \end{enumerate}
 
@@ -201,53 +191,55 @@ you are responsible for checking the white board for status updates.
 
 % Note: something about the visitor design pattern.
 
-\item ({\bf 10 Points}) It is essential for a software system to have
-  a design that is easy to understand and implement.  Answer the
-  following questions about the software design process.
+\item ({\bf 10 Points}) It is essential for a software system to have a design that is easy to understand and implement.
+	Answer the following questions about the design of software.
 
 \begin{enumerate}
 
-\item ({\bf 2 Points}) Define the term {\em model} and clearly state
-  the fundamental reason for the creation of models during the
-  development of software.
+\item ({\bf 3 Points}) What does it mean if two modules in a system are tightly coupled? Loosely coupled? What is the
+	difference between control and data coupling between modules?
 
-\item ({\bf 4 Points}) The unified modeling language supports the
-  creation of {\em class diagrams} that can illustrate inheritance
-  hierarchies.  What is an {\em inheritance hierarchy}?  Why is it
-  useful to create inheritance hierarchies in object-oriented
-  programs?  Your response to this question should also provide an
-  example of a class diagram.
+% Afferent Couplings (Ca)
+% The number of other packages that depend upon classes within the package is an indicator of the package's responsibility.
+% 
+% Efferent Couplings (Ce)
+% The number of other packages that the classes in the package depend upon is an indicator of the package's independence.
+% 
 
-\item ({\bf 4 Points}) The unified modeling language provides
-  diagrams that visualize both {\em static} and {\em dynamic} views of
-  a software system.  After explaining the terms static and dynamic
-  view, your response to this question should discuss the similarities
-  and differences between these two types of views.
+\item ({\bf 3 Points}) The packages within a Java program can exhibit either afferent or efferent couplings.  What is
+	the meaning of these two types of coupling? Your response to this question should furnish a diagram to illustrate
+	each type of coupling.   
+
+\item ({\bf 4 Points}) The unified modeling language (UML) provides diagrams that visualize both static and dynamic
+	views of a software system.  After explaining the terms static and dynamic view and furnishing and example of each,
+	your response to this question should discuss the similarities and differences between these two types of views.
 
 \end{enumerate}
 
 \newpage
 
-\item ({\bf 10 Points}) When it comes to developing high quality
-  software applications, it is important to properly complete all of
-  the phases of the software lifecycle.  Answer the following
-  questions about the lifecycle of engineering software.
+\item ({\bf 10 Points}) When it comes to developing high quality software applications, it is important to properly
+	complete all of the phases of the software life cycle.  Answer the following questions about the life cycle that you
+	can follow to engineer software.
 
 \begin{enumerate}
 
-\item ({\bf 4 Points}) Suppose that you are part of a development team
-  that is responsible for implementing a compiler for the Java
-  programming language.  The manager of your team asks you to fully
-  implement {\em array-bounds checking} in your compiler.  After
-  defining what this term means, explain whether or not this
-  requirement is {\em feasible}.
+\item ({\bf 4 Points}) Suppose that you are part of a development team that is responsible for implementing a compiler
+	for the Java programming language.  The manager of your team asks you to fully implement array-bounds checking
+	in your compiler.  After defining what this term means, explain whether or not this requirement is feasible.
 
-\item ({\bf 2 Points}) After conducting an empirical investigation of
-  software errors, Basili and Perricone draw the following conclusion:
-  ``48 percent of faults observed in a medium-scale software project
-  were attributed to incorrect or misinterpreted functional
-  specifications or requirements.''  In your opinion, why is this the
-  case?
+\item ({\bf 2 Points}) After conducting an empirical investigation of software errors, Basili and Perricone draw the
+	following conclusion: ``48 percent of faults observed in a medium-scale software project were attributed to
+	incorrect or misinterpreted functional specifications or requirements.''  In your opinion, why is this the case?
+
+\item ({\bf 2 Points}) When specifying and designing a software, it is often useful to specify a method's preconditions
+	and postconditions. What is the meaning of these two terms?
+
+\item ({\bf 2 Points}) The Visitor design pattern requires the use of the {\tt visit} and {\tt accept} methods.  What is
+	the purpose of these methods? During the execution of a program that uses the Visitor design pattern, in what order
+	are these methods called?
+
+
 
 % \item ({\bf 4 Points}) It is important to develop ways to rate
 %   the quality of a requirements document since the individual
