@@ -1,4 +1,4 @@
-\documentclass[12pt,epsf,psfig,graphics]{article}             
+\documentclass[12pt,epsf,psfig,graphicx]{article}             
 
 % \documentstyle[bookman,epsf]{article}             
 \textwidth = 6.5in
@@ -9,6 +9,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
+\usepackage{graphicx}
 
 % set it so that subsubsections have numbers and they
 % are displayed in the TOC (maybe hard to read, might want to disable)
@@ -113,8 +114,18 @@ you are responsible for checking the white board for status updates.
 
 \newpage
 
-\item ({\bf 10 Points}) It is critical for a software engineer to be able to capture and use the requirements for a 
-	system.  Answer the following questions about requirements elicitation and software architecture.
+\begin{figure}[t]
+	\centering
+	\begin{tabular}{c c}
+		\begin{minipage}{3.4in} \includegraphics[width=3in]{37.png} \vspace*{-.2in} \begin{center}(a)\end{center} \end{minipage} & 
+		\begin{minipage}{3.4in} \includegraphics[width=3in]{45.png} \vspace*{-.2in} \begin{center}(b)\end{center} \end{minipage}
+ 	\end{tabular}
+	\caption{The Evolving Architecture of the JUnit Test Automation Framework.}
+	\label{fig:junit}
+\end{figure}
+
+\item ({\bf 10 Points}) An engineer must be able to capture and use the requirements for a system.  Answer the following
+	questions about requirements elicitation and software architecture.
 
 \begin{enumerate}
 
