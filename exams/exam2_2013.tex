@@ -1,9 +1,14 @@
-\documentstyle[bookman,epsf]{article}             
+\documentclass[12pt,epsf,psfig,graphics]{article}             
+
+% \documentstyle[bookman,epsf]{article}             
 \textwidth = 6.5in
 \textheight = 9.05in
 \topmargin 0.0in
 \oddsidemargin 0.0in
 \evensidemargin 0.0in
+
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 
 % set it so that subsubsections have numbers and they
 % are displayed in the TOC (maybe hard to read, might want to disable)
@@ -55,39 +60,61 @@ Examination Two \\
 
 \end{center}
 
-\noindent Answer the five questions that are listed below.  You must provide answers to these questions on a separate
-sheet of paper.  Please develop responses that clearly express your ideas in the most succinct manner possible.  You are
-not permitted to complete this examination in conjunction with any of your classmates.  Furthermore, you cannot consult
-any outside references during this examination.  If you have questions concerning the problems that are listed below,
-then please visit my office during the examination period.  If you leave the classroom to take the exam, then you are
-responsible for checking the white board for status updates.
+\noindent Answer the five questions that are listed on the following pages.  You must provide answers to these questions
+on a separate sheet of paper.  Please develop responses that clearly express your ideas in the most succinct manner
+possible.  You are not permitted to complete this examination in conjunction with any of your classmates.  Furthermore,
+you cannot consult any outside references during this examination.  If you have questions concerning the following
+problems, then please visit my office during the examination period.  If you leave the classroom to take the exam, then
+you are responsible for checking the white board for status updates.
+
+% \noindent Answer the five questions that are listed below.  You must provide answers to these questions on a separate
+% sheet of paper.  Please develop responses that clearly express your ideas in the most succinct manner possible.  You are
+% not permitted to complete this examination in conjunction with any of your classmates.  Furthermore, you cannot consult
+% any outside references during this examination.  If you have questions concerning the problems that are listed below,
+% then please visit my office during the examination period.  If you leave the classroom to take the exam, then you are
+% responsible for checking the white board for status updates.
+% 
+\begin{enumerate}
+
+\item ({\bf 10 Points}) Requirements elicitation and analysis is an important part of the overall software life cycle.
+	Answer the following questions about software requirements.
 
 \begin{enumerate}
 
-\item ({\bf 10 Points}) Requirements elicitation and analysis is an
-  important part of the overall software lifecycle.  Answer the
-  following questions about software requirements.
+	\item ({\bf 2 Points}) What is a software requirement? Why is it important to define the requirements of a software
+		application before starting to implement it?
 
-\begin{enumerate}
+	\item ({\bf 4 Points}) Please define and give at least one example of each type of requirement.
 
-\item ({\bf 1 Points}) What is a software requirement?
+		\begin{enumerate}
+			\item Functional requirement
+			\item Non-functional requirement
+			\item Design constraint
+			\item Process constraint
+		\end{enumerate}
 
-\item ({\bf 6 Points}) Sommerville argues that there are six
-  requirements to which all requirements should adhere.  What are
-  these six requirements?
+	\item ({\bf 4 Points}) There are at least eight ``requirements'' for software requirements.  Please name and define
+		four of the eight requirements; state the importance of each of these.
 
-\item ({\bf 3 Points}) Software engineers commonly organize
-  requirements into the following three categories: {\em functional},
-  {\em non-functional}, and {\em domain}.  Please provide a definition
-  and an example of these three types of requirements.
 
+% What is a software requirement?
+
+% \item ({\bf 6 Points}) Sommerville argues that there are six
+%   requirements to which all requirements should adhere.  What are
+%   these six requirements?
+% 
+
+% \item ({\bf 3 Points}) Software engineers commonly organize
+%   requirements into the following three categories: {\em functional},
+%   {\em non-functional}, and {\em domain}.  Please provide a definition
+%   and an example of these three types of requirements.
+% 
 \end{enumerate}
 
 \newpage
 
-\item ({\bf 10 Points}) It is critical for a software engineer to be
-  able to capture the requirements for a software system.  Answer the
-  following questions about requirements elicitation.
+\item ({\bf 10 Points}) It is critical for a software engineer to be able to capture and use the requirements for a 
+	system.  Answer the following questions about requirements elicitation and software architecture.
 
 \begin{enumerate}
 
@@ -96,18 +123,19 @@ responsible for checking the white board for status updates.
   How does it apply to the task of requirements elicitation and
   analysis?
 
-\item ({\bf 4 Points}) The process for capturing the requirements of a
-  software system normally includes four distinct phases.  Draw a
-  diagram that shows each of these phases and indicates how a software
-  engineer can proceed through them.  In your diagram, a square or a
-  rectangle should denote a phase and a directed edge should show a
-  possible way to follow from one phase to the next.
+% \item ({\bf 4 Points}) The process for capturing the requirements of a
+%   software system normally includes four distinct phases.  Draw a
+%   diagram that shows each of these phases and indicates how a software
+%   engineer can proceed through them.  In your diagram, a square or a
+%   rectangle should denote a phase and a directed edge should show a
+%   possible way to follow from one phase to the next.
+% 
 
-\item ({\bf 2 Points}) Hamlet and Maybee argue that requirements
-  should be {\em non-prescriptive}.  What does it mean if a
-  requirement has this characteristic?  After defining this term,
-  please give an example of a non-prescriptive requirement.
-
+% \item ({\bf 2 Points}) Hamlet and Maybee argue that requirements
+%   should be {\em non-prescriptive}.  What does it mean if a
+%   requirement has this characteristic?  After defining this term,
+%   please give an example of a non-prescriptive requirement.
+% 
 \end{enumerate}
 
 \newpage
@@ -118,10 +146,10 @@ responsible for checking the white board for status updates.
 
 \begin{enumerate}
 
-\item ({\bf 2 Points}) Define the term software architecture.  Discuss
-  some of the advantages to explicitly designing and documenting a
-  software architecture.
-
+% \item ({\bf 2 Points}) Define the term software architecture.  Discuss
+%   some of the advantages to explicitly designing and documenting a
+%   software architecture.
+% 
 \item ({\bf 3 Points}) The {\em shared} repository (or {\em tuple
   space} or {\em blackboard}) model is one example of a software
   architecture.  Please draw a diagram that explains how this
@@ -158,14 +186,14 @@ responsible for checking the white board for status updates.
   the fundamental reason for the creation of models during the
   development of software.
 
-\item ({\bf 4 Points}) The unified modelling language supports the
+\item ({\bf 4 Points}) The unified modeling language supports the
   creation of {\em class diagrams} that can illustrate inheritance
   hierarchies.  What is an {\em inheritance hierarchy}?  Why is it
   useful to create inheritance hierarchies in object-oriented
   programs?  Your response to this question should also provide an
   example of a class diagram.
 
-\item ({\bf 4 Points}) The unified modelling language provides
+\item ({\bf 4 Points}) The unified modeling language provides
   diagrams that visualize both {\em static} and {\em dynamic} views of
   a software system.  After explaining the terms static and dynamic
   view, your response to this question should discuss the similarities
@@ -196,55 +224,55 @@ responsible for checking the white board for status updates.
   specifications or requirements.''  In your opinion, why is this the
   case?
 
-\item ({\bf 4 Points}) It is important to develop ways to rate
-  the quality of a requirements document since the individual
-  requirements are used by the designers, implementers, and
-  testers throughout the remainder of the lifecycle.  Pfleeger
-  and Atlee outline the following scale for evaluating a
-  requirement:
-
-\renewcommand{\labelitemi}{$-$}
-
-          \begin{itemize}
-
-          \item 1 - You (the designer) understand this requirement
-            completely, you have designed from similar requirements in
-            the past, and you should have no trouble developing a
-            design from this requirement.
-
-          \item 2 - There are elements of this requirement that are
-            new to you, but they are not radically different from
-            requirements that you have successfully designed from in
-            the past.
-
-          \item 3 - There are elements of this requirements that are
-            very different from requirements that you have designed
-            from in the past, but you understand the requirement and
-            you think that you can develop a good design from it.
-
-          \item 4 - There are parts of this requirement that you do
-            not understand, and you are not sure that you can develop
-            a good design.
-
-          \item 5 - You do not understand this requirement at all, and
-            you cannot develop a design for it.
-
-          \end{itemize}
-
-          Using this rating scheme, it is possible to determine
-          whether or not a software development team should start to
-          design and implement the system.  As part of your response
-          to this question, please draw two {\em histograms} where the
-          vertical axis is the {\em number} of requirements in each of
-          the above categories and the horizontal axis gives the {\em
-            categories} in numerically increasing order (i.e., 1 to
-          5).  One of the histograms must represent a system that is
-          ready to leave the requirements elicitation and analysis
-          phase and the other should reveal that it is not advisable
-          to start the architecture and design phase.  Your response
-          should clearly explain why you created the histograms in
-          this way.
-
+% \item ({\bf 4 Points}) It is important to develop ways to rate
+%   the quality of a requirements document since the individual
+%   requirements are used by the designers, implementers, and
+%   testers throughout the remainder of the lifecycle.  Pfleeger
+%   and Atlee outline the following scale for evaluating a
+%   requirement:
+% 
+% \renewcommand{\labelitemi}{$-$}
+% 
+%           \begin{itemize}
+% 
+%           \item 1 - You (the designer) understand this requirement
+%             completely, you have designed from similar requirements in
+%             the past, and you should have no trouble developing a
+%             design from this requirement.
+% 
+%           \item 2 - There are elements of this requirement that are
+%             new to you, but they are not radically different from
+%             requirements that you have successfully designed from in
+%             the past.
+% 
+%           \item 3 - There are elements of this requirements that are
+%             very different from requirements that you have designed
+%             from in the past, but you understand the requirement and
+%             you think that you can develop a good design from it.
+% 
+%           \item 4 - There are parts of this requirement that you do
+%             not understand, and you are not sure that you can develop
+%             a good design.
+% 
+%           \item 5 - You do not understand this requirement at all, and
+%             you cannot develop a design for it.
+% 
+%           \end{itemize}
+% 
+%           Using this rating scheme, it is possible to determine
+%           whether or not a software development team should start to
+%           design and implement the system.  As part of your response
+%           to this question, please draw two {\em histograms} where the
+%           vertical axis is the {\em number} of requirements in each of
+%           the above categories and the horizontal axis gives the {\em
+%             categories} in numerically increasing order (i.e., 1 to
+%           5).  One of the histograms must represent a system that is
+%           ready to leave the requirements elicitation and analysis
+%           phase and the other should reveal that it is not advisable
+%           to start the architecture and design phase.  Your response
+%           should clearly explain why you created the histograms in
+%           this way.
+% 
 \end{enumerate}
 
 \end{enumerate}
