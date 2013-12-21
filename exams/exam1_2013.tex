@@ -1,0 +1,332 @@
+\documentclass[12pt,epsf,psfig,graphics]{article}             
+\textwidth = 6.5in
+\textheight = 9.05in
+\topmargin 0.0in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+
+% set it so that subsubsections have numbers and they
+% are displayed in the TOC (maybe hard to read, might want to disable)
+
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+
+%\usepackage{graphics}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% define widow protection 
+        
+\def\widow#1{\vskip #1\vbadness10000\penalty-200\vskip-#1}
+
+% define a little section heading that doesn't go with any number
+
+\def\littlesection#1{
+\widow{2cm}
+\vskip 0.5cm
+\noindent{\bf #1}
+\vskip 0.1cm
+\noindent
+}
+
+% A paraphrase mode that makes it easy to see the stuff that shouldn't
+% stay in for the final proposal
+
+\newdimen\tmpdim
+\long\def\paraphrase#1{{\parskip=0pt\hfil\break
+\tmpdim=\hsize\advance\tmpdim by -15pt\noindent%
+\hbox to \hsize
+{\vrule\hskip 3pt\vrule\hfil\hbox to \tmpdim{\vbox{\hsize=\tmpdim
+\def\par{\leavevmode\endgraf}
+\obeyspaces \obeylines 
+\let\par=\endgraf
+\bf #1}}}}}
+
+\renewcommand{\baselinestretch}{1.2}    % must go before the begin of doc
+\newtheorem{principle}{Principle}
+\newtheorem{definition}{Definition}
+\newtheorem{define}{Definition}
+% go with the way that CC sets the margins
+
+\usepackage{listings}
+
+\usepackage{color}
+
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\begin{document}
+
+\lstset{language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+%numbers=left,
+numberstyle=\scriptsize\color{black},
+stepnumber=1,
+numbersep=7pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+% handle widows appropriately
+\def\widow#1{\vskip #1\vbadness10000\penalty-200\vskip-#1}
+
+\begin{center}
+
+CS290: Principles of Software Development \\
+Examination One\\
+%Saturday December 11, 2004 \\
+
+\end{center}
+
+\noindent
+Answer the five questions that are listed on the following pages.  You must provide answers to these questions on a
+separate sheet of paper.  Please develop responses that clearly express your ideas in the most succinct manner possible.
+You are not permitted to complete this examination in conjunction with any of your classmates.  Furthermore, you cannot
+consult any outside references during this examination.  If you have questions concerning the following problems, then
+please visit my office during the examination period.  If you leave the classroom to take the exam, then you are
+responsible for checking the white board for status updates.
+
+%\mbox{} \newline
+%\mbox{} \newline
+
+\begin{enumerate}
+  
+\item ({\bf 10 Points}) In {\em The Mythical Man Month} Frederick
+  Brooks identifies some of the fundamental challenges associated with
+  the engineering of computer software.  Answer the following
+  questions about the concepts developed by Brooks.
+
+  \begin{enumerate}
+          
+  \item ({\bf 6 Points}) One of the most challenging tasks associated
+    with implementing a software system is managing the software
+    development team.  Brooks presents several graphs that contain
+    ``People'' on the horizontal axis and ``Months'' on the vertical
+    one.  What does a curve on this graph look like if $\ldots$
+
+    \begin{enumerate}
+
+      \item ({\bf 3 Points}) $\ldots$ a task is perfectly partitionable?
+    
+      \item ({\bf 3 Points}) $\ldots$ a task is not partitionable at all?
+
+    \end{enumerate}
+
+  \item ({\bf 4 Points}) Using his experience at IBM as a foundation
+    for his ideas, Brooks describes the complete evolution of a
+    programming systems product.  Using a diagram with four distinct
+    quadrants, please describe the full transformation of a program
+    into a programming systems product.  Please make sure that your
+    diagram clearly explains the cost overheads associated with this
+    transformation.
+
+  \end{enumerate}
+        
+\newpage
+
+\item ({\bf 10 Points}) Software process models are used as
+  abstractions that can help to explain different approaches to
+  software development. Respond to the following questions about how
+  process models can guide the creation of software systems.
+
+        \begin{enumerate}
+          
+        \item ({\bf 4 Points}) Discuss the fundamental phases that
+          are common to most software lifecycles.  Provide a one or two
+          sentence description of each activity.  Please include an
+          example of one or two tools that can support each of these
+          activities. If no tool support is available, then clearly
+          state why this is the case!  Your response should include a
+          properly labeled figure that includes the phase and its
+          input and output.
+          
+        \item ({\bf 2 Points}) Explain the similarities and
+          differences between the waterfall lifecycle model and the
+          spiral model proposed by Boehm.
+
+        \item ({\bf 2 Points}) You can also use either an incremental
+          or the iterative approach to developing software.  What
+          are the similarities and differences between these two
+          models?
+
+        \item ({\bf 2 Points}) A node in an activity graph stands for
+          a milestone in a software development project.  What
+          is the meaning behind the nodes and edges in an activity
+          graph when they have the following two configurations?
+
+          \begin{enumerate}
+
+            \item Nodes $N_i$ and $N_j$ that are connected by a solid
+              edge from $N_i$ to $N_j$
+
+            \item Nodes $N_k$ and $N_l$ that are connected by a dashed
+              edge from $N_k$ to $N_l$
+
+          \end{enumerate}
+
+        \end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Testing is a part of the software lifecycle
+  that can be used for many different purposes.  Provide a response 
+  to each of the following questions about testing.
+
+\begin{enumerate}       
+  
+% \item ({\bf 3 Points}) Pfleeger and Atlee identify different types of activities such as unit, integration, and system
+% 	testing.  What is the motivation behind performing these tasks?
+% 
+%% \item ({\bf 2 Points}) Software testing is useful because of the
+%%   benefits that you enumerated in response to the first part of this
+%%   question.  Yet, testing has several different limitations.  Discuss
+%%   two of the limitations commonly associated with software testing.
+
+	\item ({\bf 3 Points}) There are many software development tools that we can use to support the development and
+		testing of software.  Furnish a full explanation of these commands:
+
+		\begin{enumerate}
+			\item {\tt :Ant compile}
+			\item {\tt :Ant test}
+			\item {\tt :Ant coverage}
+		\end{enumerate}
+
+\item ({\bf 2 Points}) What are the similarities and differences
+  between the implementation and testing of hardware and software?  Is
+  it easier to test hardware or software?  Why?
+
+\item ({\bf 5 Points}) Verification and validation are two activities that software engineers commonly perform during
+	the construction of a software application.  In your response to this part of the question, please define both of
+	these terms and furnish a concrete example of an associated activity.  Finally, you should compare and
+	contrast these terms.
+  
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Managers often use a software process in order
+  to make decisions about when to release an application.  For
+  example, suppose that you are a manager and you are determining
+  which features will be a part of the next release of your program.
+  Moreover, assume that for each new requirement $R_j$ you already
+  know $C_j$, the cost associated with implementing the requirement
+  and $B_j$, the monetary benefit for a program that contains this
+  feature.
+
+  In order to determine which requirements will be part of the next
+  release for your application, you must choose from the requirements
+  $R = \{ R_1, \ldots, R_n \}$ and ensure that (i) the implementation
+  tasks are completed at no more than the total fixed cost $C$ and
+  (ii) you maximize the total monetary benefit that your company will
+  see when they release the tool.  Given cost and benefit information
+  for each $R_j$ and the fixed cost $C$, how will you determine which
+  requirements are included in the next release of your program?
+    
+\newpage
+
+\item ({\bf 10 Points}) Software implementation is the process of
+  translating the software specification, design, and architecture
+  into an executable representation.  Answer the following questions
+  about the implementation and evaluation of computer software.
+
+\begin{enumerate}
+
+  % \item ({\bf 4 Points}) Implement a data generator that takes a list
+  %   of numbers as input and then produces a list of lists as output.
+  %   For instance, please consider the following outputs for the input
+  %   list 1 2 3 4.  From this example, you can see that the data
+  %   generator must return all of the lists that may be obtained by
+  %   swapping certain items in the input list.  In this specific
+  %   instance, an input list of size four produces an output list that
+  %   contains six individual lists.  You may implement your data
+  %   generator in any programming language.
+
+  %   \begin{enumerate}
+
+  %   \item 2 1 3 4
+  %     
+  %   \item 3 2 1 4
+
+  %   \item 4 2 3 1
+
+  %   \item 1 3 2 4
+  %       
+  %   \item 1 4 3 2
+
+  %   \item 1 2 4 3
+
+  % \end{enumerate}
+
+  % \item ({\bf 3 Points}) Provide a test plan for the data generator
+  %   that you implemented in Part 5(a) of this question.  Your plan
+  %   should identify the inputs and anticipated output for each of the
+  %   tests.  You should also clearly explain why you decided to include
+  %   each of the test cases in the overall plan.
+
+  \item ({\bf 2 Points}) Jeffrey Voas poses the question ``can clean
+    pipes produce dirty water?'' in an article of the same title from
+    IEEE Software.  What is the meaning behind the concepts of ``clean
+    pipes'' and ``dirty water''?  In the context of software
+    engineering, what is your response to the question that Jeffrey Voas raises?
+
+\item ({\bf 4 Points}) Figure~\ref{kinetic} provides an incorrect implementation of the {\tt computeVelocity} method.
+	What are the mistake(s) in this method?  How would you fix them?
+
+\item ({\bf 2 Points}) Provide a test, written in JUnit format, that {\em cannot} find the original defect.  Your
+	response to this question must explain why the test cannot identify the problem.
+
+\item ({\bf 2 Points}) Provide a test, written in JUnit format, that {\em can} find the original defect.  Your
+	response to this question must explain why the test can identify the problem.
+
+
+
+\end{enumerate}
+
+\begin{figure}[t]
+\begin{minipage}{6in}
+  \lstset{numbers=left}
+  \begin{lstlisting}
+package edu.allegheny.kinetic;
+
+import java.lang.Math;
+
+public class Kinetic {
+
+	public static String computeVelocity(int kinetic, int mass) {
+
+		int velocity_squared = 0;
+		int velocity = 0;
+		StringBuffer final_velocity = new StringBuffer();
+
+		if (mass != 0) {
+			velocity_squared = 3 * (kinetic / mass);
+			velocity = (int) Math.sqrt(velocity_squared);
+			final_velocity.append(velocity);
+		}
+
+		else {
+			final_velocity.append("Undefined");
+		}
+
+		return final_velocity.toString();
+	}
+
+}
+  \end{lstlisting}
+
+\end{minipage}
+\caption{The {\tt computeVelocity} Method of the {\tt Kinetic} class.}
+\label{kinetic}
+\end{figure}
+
+
+\end{enumerate}
+
+\end{document}

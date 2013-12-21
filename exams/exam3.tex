@@ -1,0 +1,471 @@
+\documentclass[12pt,epsf,psfig,graphics]{article}             
+\textwidth = 6.5in
+\textheight = 9.05in
+\topmargin 0.0in
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+
+% set it so that subsubsections have numbers and they
+% are displayed in the TOC (maybe hard to read, might want to disable)
+
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+
+%\usepackage{graphics}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% define widow protection 
+        
+\def\widow#1{\vskip #1\vbadness10000\penalty-200\vskip-#1}
+
+% define a little section heading that doesn't go with any number
+
+\def\littlesection#1{
+\widow{2cm}
+\vskip 0.5cm
+\noindent{\bf #1}
+\vskip 0.1cm
+\noindent
+}
+
+% A paraphrase mode that makes it easy to see the stuff that shouldn't
+% stay in for the final proposal
+
+\newdimen\tmpdim
+\long\def\paraphrase#1{{\parskip=0pt\hfil\break
+\tmpdim=\hsize\advance\tmpdim by -15pt\noindent%
+\hbox to \hsize
+{\vrule\hskip 3pt\vrule\hfil\hbox to \tmpdim{\vbox{\hsize=\tmpdim
+\def\par{\leavevmode\endgraf}
+\obeyspaces \obeylines 
+\let\par=\endgraf
+\bf #1}}}}}
+
+\renewcommand{\baselinestretch}{1.2}    % must go before the begin of doc
+\newtheorem{principle}{Principle}
+\newtheorem{definition}{Definition}
+\newtheorem{define}{Definition}
+% go with the way that CC sets the margins
+
+\begin{document}
+
+% handle widows appropriately
+\def\widow#1{\vskip #1\vbadness10000\penalty-200\vskip-#1}
+
+\begin{center}
+
+CS290: Principles of Software Development \\
+Final Examination \\
+%Saturday December 11, 2004 \\
+
+\end{center}
+
+\noindent
+Answer the ten questions that are listed below.  You must provide
+answers to these questions on a separate sheet of paper.  Please
+develop responses that clearly express your ideas in the most succinct
+manner possible.  You are not permitted to complete this examination
+in conjunction with any of your classmates.  Furthermore, you cannot
+consult any outside references during this examination.  If you have
+questions concerning the problems that are listed below, please visit
+my office during the examination period.  If you leave the classroom
+to take the exam, you are responsible for checking the white board for
+status updates.
+
+%\mbox{} \newline
+%\mbox{} \newline
+
+\begin{enumerate}
+  
+\item ({\bf 10 Points}) In {\em The Mythical Man Month} Frederick
+  Brooks states that there is no {\em silver bullet} for the field of
+  software engineering.  That is, he believes that there is no
+  technical or managerial development that will offer an order of
+  magnitude improvement in productivity. In order to support his
+  argument, Brooks describes several concepts in light of the
+  productivity equation provided in Equation~\ref{productivity}.
+
+        \begin{equation} \label{productivity}
+        \mbox{{\em Time of task}} = \sum_{i = 1}^{n} 
+                \mbox{{\em Frequency}}_i \times \mbox{{\em Time}}_i
+        \end{equation}
+
+        \begin{enumerate}
+          
+        \item ({\bf 4 Points}) Explain the notions of {\em essence}
+          and {\em accident} as Frederick Brooks defines them in the
+          {\em Mythical Man Month}.  Give one or two examples of each
+          concept.
+          
+        \item ({\bf 4 Points}) Using Equation~\ref{productivity},
+          explain why Brooks asserts that there is no silver bullet to
+          solve the problems that are associated with constructing
+          software.
+        
+        \item ({\bf 2 Points}) Brooks states that software engineers
+          have developed a number of potential silver bullets.
+          Discuss two candidates for silver bullets and state whether
+          or not you believe that they are indeed silver bullets.
+
+       \end{enumerate}
+        
+\newpage
+
+\item ({\bf 10 Points}) Software process models are used as
+  abstractions that can help to explain different approaches to
+  software development.  Process models apply the same fundamental
+  activities in different manners.
+
+        \begin{enumerate}
+          
+        \item ({\bf 5 Points}) Discuss the fundamental ``phases'' that
+          are common to most software processes.  Provide a one or two
+          sentence description of each activity.  Please include an
+          example of one or two tools that can support each of these
+          activities. If no tool support is available, clearly state
+          why this is the case!  Your response should include a
+          properly labeled figure that includes the phase and its
+          input and output.
+          
+        \item ({\bf 3 Points}) After clearly explaining the {\em
+          halting problem}, please select one phase of the software
+          lifecycle and discuss how the halting problem is relevant to
+          an activity in this phase.
+
+        \item ({\bf 2 Points}) Explain the similarities and
+          differences between the waterfall lifecycle model (i.e., the
+          ``traditional'' model that is described by Hamlet and
+          Maybee) and the spiral model proposed by Boehm.
+
+        \end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Testing is a part of the software lifecycle that can
+be used for many different purposes.  Answer the following question about
+software testing by providing a response for each part.
+
+\begin{enumerate}       
+  
+\item ({\bf 2 Points}) Software testing is useful because it can
+  reveal defects in programs.  However, testing has several different
+  limitations.  Discuss one or two of the limitation(s) commonly
+  associated with software testing.
+  
+\item ({\bf 2 Points}) What are the similarities and differences
+  between the implementation and testing of computer hardware and
+  computer software?  Is it easier to test hardware or software?  Why?
+  
+\item ({\bf 3 Points}) Regression testing is one technique that can be
+  used during the testing of a program.  Please define regression
+  testing and clearly state the techniques that can be used to make it
+  more cost-effective and practical.
+  
+\item ({\bf 3 Points}) Defect testing is often broken down into three
+  different types of testing practices.  Define the terms black-box
+  testing, white-box testing, and grey-box testing.  Furthermore,
+  explain the similarities and differences between these three types
+  of testing.
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Research in software architectures has flourished
+in recent years.  Answer the following question about software architectures
+by providing a response for each part.
+
+\begin{enumerate}
+
+\item ({\bf 2 Points}) Define the term software architecture.  Discuss
+  some of the advantages that are associated with explicitly designing
+  and documenting a software architecture.  Your response should
+  include the name of a software architecture that is different than
+  the two mentioned in the later parts of this question.
+
+\item ({\bf 4 Points}) The {\em shared repository} model is one
+  example of a software architecture.  In this architecture, a
+  centralized repository is used to facilitate information exchange.
+  Discuss at least one strength and one weakness of this type of
+  software architecture.  Your response should provide an example of a
+  software application that adheres to this architecture.
+
+\item ({\bf 4 Points}) The {\em pipe and filter} is another example of
+  a software architecture.  In this architecture, filters are
+  processing units that are connected with pipes.  Discuss at least
+  one strength and one weakness of this type of software architecture.
+  You should use Unix pipes and filters as a frame of reference for
+  your response.
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Design patterns are useful abstractions in
+  software development.  Design patterns can be used to simplify the
+  vocabulary that is used to describe a software system.  Also, design
+  patterns are often used to present simple and unique solutions to
+  software development problems.  Answer the following questions about
+  the Flyweight and Singleton design patterns.
+
+\begin{enumerate}
+  
+\item ({\bf 4 Points}) Using a diagram, Java source code, and a
+  textual description, please explain how to use the Flyweight design
+  pattern as part of the implementation of an {\tt Identifier\-Table}.
+  What are the strengths and weaknesses associated with the Flyweight
+  design pattern when it is used to implement the {\tt
+    IdentifierTable}?
+  
+\item ({\bf 4 Points}) Using Java source code, describe the
+  implementation of an {\tt IdentifierTable} that adheres to the
+  Singleton design pattern.  What are the strengths and weaknesses
+  associated with an {\tt IdentifierTable} that adheres to both the
+  Flyweight and the Singleton design patterns?
+  
+\item ({\bf 2 Points}) Using Java source code that adheres to the
+  requirements of the JUnit test automation framework, please write
+  two test cases that can test your proposed implementation of the
+  {\tt IdentifierTable}.  Your tests can assume that the {\tt
+    IdentifierTable} only adheres to the Flyweight design pattern.
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Defect testing is focused on finding the
+  ``bugs'' in a program.  In order to isolate a defect, a test input
+  must execute the defect, infect the data state, and propagate to the
+  program's output.  Answer the following questions about defect
+  testing and use the code segment in Figure~\ref{pie_code} to answer
+  Part~\ref{need_code}.
+
+\begin{figure}[h]
+
+\footnotesize{
+\begin{verbatim}
+        /* This program is supposed to calculate the velocity of an
+           object based upon its kinetic energy and its mass. */
+        main() 
+        {
+          int velocity, velocity_squared, mass, kinetic = 1;
+          if( kinetic != 0 ) 
+          {
+            printf(``Enter Kinetic Energy and Mass of Object:'');
+            scanf(``%d %d'', &kinetic, &mass);
+            if( mass != 0 ) 
+            {
+        [*]   velocity_squared = 3 * (kinetic / mass);
+              velocity = sqrt(velocity_squared);
+              printf(``The Velocity is: %d'', velocity); 
+            }
+            else 
+            {
+              printf(``The Velocity is Undefined.\n'');
+            }
+          }
+        }
+\end{verbatim} }
+
+\vspace*{-.2in}
+
+\caption{Program that Should Calculate the Velocity of an Object.}
+\label{pie_code}
+\end{figure}
+
+\begin{enumerate}
+
+\item \label{need_code} ({\bf 10 Points}) The general formula for calculating
+the kinetic energy of an object is 
+\( kinetic=\frac{1}{2}mass\times velocity^2 \).  Thus, the equation for the 
+{\tt velocity} variable should be 
+\( velocity=sqrt(2 \times (kinetic / mass)) \).  At the {\tt [*]} position
+inside of the code, we see that the calculation for {\tt velocity\_squared}
+includes a $3$ instead of a $2$.  Using the following scenarios, describe the 
+execution of the program in Figure~\ref{pie_code}.   Make sure that you 
+clearly state whether the provided inputs will isolate the defect located at
+the {\tt [*]} position inside of the code.
+
+%\newpage
+
+\begin{itemize}
+
+\item Scenario 1: input 5 0
+\item Scenario 2: input 0 5
+\item Scenario 3: input 1000 5
+\item Scenario 4: input 8 1
+
+\end{itemize}
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Mutation testing has emerged as one technique
+  that can be used during the verification and validation process.
+  Answer the following question about mutation testing and use the
+  definitions below to respond to Part~\ref{compare}.
+
+\begin{define}
+
+If P is a program to implement function F on domain D, then a test set
+T $ \subset $ D is adequate for P and F if ( $\forall$ programs Q ),
+$[Q(D) \neq F(D) ] \Rightarrow [(\exists t \in T) (Q(t) \neq F(t))]$.
+
+\label{adeq}
+\end{define}
+
+\begin{define}
+
+If P is a program to implement function F on domain D and $\Phi$ is a
+finite collection of programs, then a test set T $ \subset $ D is
+adequate for P relative to $\Phi$ if ( $\forall$ programs Q $\in \Phi$
+), $[Q(D) \neq F(D) ] \Rightarrow [(\exists t \in T) (Q(t) \neq
+  F(t))]$.
+
+\label{rel}
+\end{define}
+
+\begin{enumerate}
+
+\item \label{compare} ({\bf 3 Points}) Definitions~\ref{adeq} and
+  \ref{rel} provide a description of the terms {\em adequate} and {\em
+    relative adequate}.  Using these definitions, explore the
+  similarities and differences between the terms adequate and relative
+  adequate.  How are these definitions related to the mutation testing
+  technique?
+
+\item \label{purpose} ({\bf 3 Points}) Explain the main reason for
+  performing mutation testing. Next, suppose that a given test suite
+  is able to kill $80\%$ of the syntactic mutants in the set $\Phi$.
+  Discuss how this could influence the remainder of the testing
+  effort.
+
+\item ({\bf 2 Points}) Suppose that you are developing a mutation
+  testing tool for relational operators.  If your tool encountered the
+  statement {\tt if(num\_deposits > MAX\_DEPOSITS)}, what syntactic
+  mutants would you generate to populate the set $\Phi$?
+
+\item ({\bf 2 Points}) Mutation testing can be a very powerful
+  technique during the phase of verification and validation.  However,
+  it also has several important limitations.  Discuss two or three of
+  the major limitations of mutation testing.  Your response should
+  provide the name of one or two mutation testing tools that are
+  available for the Java programming language.
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Software requirements and formal methods are
+  an important part of the software engineering life cycle.  Answer
+  the following questions about requirements elicitation and analysis.
+
+\begin{enumerate}
+
+\item ({\bf 3 Points}) Hamlet and Maybee contend that a formal
+  specification can be used as an automated test oracle.  After
+  clearly defining the terms {\em formal specification} and {\em test
+    oracle}, please explain how Hamlet and Maybee envision the use of
+  specifications as oracles.  Your response should also comment on the
+  limitations of formal methods.
+
+\item ({\bf 2 Points}) Explain the similarities and differences
+  between {\em functional} and {\em non-functional} requirements.
+
+\item ({\bf 3 Points}) Hamlet and Maybee frequently stress the
+  importance of {\em traceability} throughout the software engineering
+  lifecycle.  What is traceability and why is it important?
+
+\item ({\bf 2 Points}) Is it important to avoid requirements that are
+  {\em vague} and {\em ambiguous}.  Please define each of these terms
+  and then clearly explain how they are different.
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Software implementation is the process of
+  translating the software specification, design, and architecture
+  into an executable representation.  Answer the following questions
+  about the implementation of computer software.
+
+\begin{enumerate}
+
+  \item ({\bf 3 Points}) Implement a data generator that takes a list
+    of numbers as input and then produce a list of lists as output.
+    For example, please consider the following outputs for the input
+    list 1 2 3 4.  From this example, you can see that the data
+    generator must return all of the lists that may be obtained by
+    swapping two adjacent items in the input list.  In this specific
+    instance, an input list of size four produces an output list that
+    contains six individual lists.  You may implement your data
+    generator in any programming language.
+
+    \begin{enumerate}
+
+    \item 2 1 3 4
+      
+    \item 3 2 1 4
+
+    \item 4 2 3 1
+
+    \item 1 3 2 4
+        
+    \item 1 4 3 2
+
+    \item 1 2 4 3
+
+  \end{enumerate}
+
+  \item ({\bf 2 Points}) Provide a {\em test plan} for the data
+    generator that you implemented in Part 9a of this question.
+
+  \item ({\bf 2 Points}) Software engineers often measure the
+    complexity of their implementations by using metrics such as {\em
+      non-commented source statements} (NCSS) or {\em cyclomatic
+      complexity} (CC).  Please define the NCSS and CC metrics.  Your
+    response should include a source code or control flow graph
+    example that illustrates your definition.
+
+  \item ({\bf 3 Points}) The software engineers at Google recently
+    found a defect in the traditional implementation of the binary
+    search.  What was the defect in this algorithm?  Your response
+    should clearly explain the situation(s) in which this fault would
+    manifest itself as a failing execution of a program.
+
+\end{enumerate}
+
+\newpage
+
+\item ({\bf 10 Points}) Software architecture and design are important
+  keys to the implementation of successful software applications.
+  Answer the following questions about architecture and design.
+
+  \begin{enumerate}
+
+    \item ({\bf 2 Points}) What is the UML?  Your response should
+      clearly explain what this term means and then discuss both the
+      {\em class diagram} and the {\em sequence diagram}.
+
+    \item ({\bf 5 Points}) Provide a complete figure that explains the
+      architecture and design of the final project related to
+      search-based test suite prioritization.  Your response should
+      use properly labeled nodes and edges that explain all of the
+      relevant facets for the software system that we collaboratively
+      implemented.
+
+    \item ({\bf 3 Points}) Please furnish a detailed description of
+      your contributions to the final project.  Your response should
+      clearly highlight how you helped to design, implement, test,
+      and/or evaluate the different processes within the figure from
+      Part 10b of this question.
+      
+
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
