@@ -59,7 +59,7 @@
 \begin{center}
 
 CS290: Principles of Software Development \\
-Final Examination Trial \\
+Final Examination \\
 %Saturday December 11, 2004 \\
 
 \end{center}
@@ -90,13 +90,9 @@ the white board for status updates.
   productivity equation provided in Equation~\ref{productivity}.
 
         \begin{equation} \label{productivity}
-        \mbox{{\em Time of software project}} = \sum_{i = 1}^{n} 
+        \mbox{{\em Time of task}} = \sum_{i = 1}^{n} 
                 \mbox{{\em Frequency}}_i \times \mbox{{\em Time}}_i
         \end{equation}
-
-        \begin{center}
-          for tasks $t_1, \ldots, t_n$
-        \end{center}
 
         \begin{enumerate}
           
@@ -132,13 +128,13 @@ the white board for status updates.
         \begin{enumerate}
           
         \item ({\bf 4 Points}) Discuss the fundamental ``phases'' that
-          are common to most software processes and furnish a one or
-          two sentence description of each activity.  Please include
-          an example of one or two tools that can support each of
-          these activities. If no tool support is available, then
-          clearly state why this is the case!  Your response should
-          include a properly labeled figure that includes the phase
-          and its input and output.
+          are common to most software processes.  Provide a one or two
+          sentence description of each activity.  Please include an
+          example of one or two tools that can support each of these
+          activities. If no tool support is available, then clearly
+          state why this is the case!  Your response should include a
+          properly labeled figure that includes the phase and its
+          input and output.
           
 %%         \item ({\bf 2 Points}) After clearly explaining the halting
 %%           problem, select one phase of the software lifecycle and
@@ -146,9 +142,10 @@ the white board for status updates.
 %%           in this phase.
 
         \item ({\bf 2 Points}) {\em Agile software development} (or,
-          {\em extreme programming}) is a software process model based
-          on iteration.  What are the most relevant features of this
-          approach to organizing the phases of the software lifecycle?
+          {\em extreme programming}) is a new software process model
+          based on iteration.  What are the most relevant features of
+          this approach to organizing the phases of the software
+          lifecycle?
 
         \item ({\bf 2 Points}) Explain the similarities and
           differences between the waterfall lifecycle model (i.e., the
@@ -156,32 +153,29 @@ the white board for status updates.
           describe in Chapter 2) and the spiral model proposed by
           Boehm.
 
-	\item ({\bf 2 Points}) An {\em activity graph} $G = \langle N, E \rangle$ can be used to manage the development
-	  of a software project. What is the meaning of the two components in $G$?  How can we use an activity graph to
-	  schedule the engineering of software?
+        \item ({\bf 2 Points}) A node in an activity graph stands for
+          a task or milestone in a software development project.  What
+          is the meaning behind the nodes and edges in an activity
+          graph when they have the following two configurations?
 
-        %% \item ({\bf 2 Points}) A node in an activity graph stands for
-        %%   a task or milestone in a software development project.  What
-        %%   is the meaning behind the nodes and edges in an activity
-        %%   graph when they have the following two configurations?
+          \begin{enumerate}
 
-        %%   \begin{enumerate}
+            \item Nodes $N_i$ and $N_j$ that are connected by a
+              directed and solid edge from $N_i$ to $N_j$
 
-        %%     \item Nodes $N_i$ and $N_j$ that are connected by a
-        %%       directed and solid edge from $N_i$ to $N_j$
+            \item Nodes $N_k$ and $N_l$ that are connected by a
+              directed and dashed edge from $N_k$ to $N_l$
 
-        %%     \item Nodes $N_k$ and $N_l$ that are connected by a
-        %%       directed and dashed edge from $N_k$ to $N_l$
-
-        %%   \end{enumerate}
+          \end{enumerate}
 
         \end{enumerate}
 
 \newpage
 
-\item ({\bf 10 Points}) Software engineers have outlined several suggestions for the creation of a high-quality
-  requirements document.  Answer the following questions about the requirements elicitation and analysis phase of the
-  software lifecycle.
+\item ({\bf 10 Points}) Hamlet and Maybee outline several suggestions
+  for the creation of a high quality requirements document.  Answer
+  the following questions about the requirements elicitation and
+  analysis phase of the software lifecycle.
 
 %% It is difficult to write a requirements document that adheres to the
 %% IEEE Standard for a {\em software requirements specification} and
@@ -215,10 +209,13 @@ the white board for status updates.
 
           \end{enumerate}                    
           
-	\item ({\bf 3 Points}) Software engineers often stress that requirements should be {\em non-prescriptive} in
-	  nature.  After defining what this term means, please provide an example of a requirement that is
-	  non-prescriptive and another that fails to adhere to this standard.  Your response to this question should not
-	  use either of the two previous requirements.
+        \item ({\bf 3 Points}) Hamlet and Maybee stress that
+          requirements should be {\em non-prescriptive} in nature.
+          After defining what this term means, please provide an
+          example of a requirement that is non-prescriptive and
+          another that fails to adhere to this standard.  Your
+          response to this question should not use either of the two
+          previous requirements.
 
         \item ({\bf 3 Points}) Suppose that you are part of a
           development team that is responsible for implementing a
@@ -258,11 +255,12 @@ by providing a response for each part.
 
 \begin{enumerate}
 
-% Your response should include the name of a software architecture that is different than the two mentioned in the later
-% parts of this question and the question on the next page.
-
-\item ({\bf 2 Points}) Define the term {\em software architecture}.  What are some of the advantages that are associated
-  with explicitly designing and documenting a software architecture? 
+\item ({\bf 2 Points}) Define the term {\em software architecture}.
+  Discuss some of the advantages that are associated with explicitly
+  designing and documenting a software architecture.  Your response
+  should include the name of a software architecture that is different
+  than the two mentioned in the later parts of this question and the
+  question on the next page.
 
 \item ({\bf 4 Points}) The {\em shared repository} model (or, {\em
   blackboard}, or {\em tuple space}) is one example of a software
@@ -272,13 +270,15 @@ by providing a response for each part.
   Your response should provide an example of a software application
   that could potentially adhere to this architecture.
 
-\item ({\bf 2 Points}) The {\em pipe and filter} is another example of a software architecture.  In this architecture,
-  filters are processing units that are connected with pipes.  Discuss at least one strength and one weakness of this
-  type of software architecture.  You may use Unix pipes and filters as a frame of reference for your response to this
-  question.
+\item ({\bf 2 Points}) The {\em pipe and filter} is another example of
+  a software architecture.  In this architecture, filters are
+  processing units that are connected with pipes.  Discuss at least
+  one strength and one weakness of this type of software architecture.
+  You should use Unix pipes and filters as a frame of reference for
+  your response.
 
 \item ({\bf 2 Points}) Figure~\ref{fig:ps} gives a diagram that
-  illustrates the {\em publish/subscribe} architecture.  Using this
+  illustrates the Publish/Subscribe architecture.  Using this
   schematic as the main reference for this architecture, completely
   describe the features and operation of a software system that
   adheres to this approach to structuring an application.  What are
@@ -299,18 +299,18 @@ by providing a response for each part.
 
 \newpage
 
-\item ({\bf 10 Points}) It is important to pick the right architecture
-  and design for a software application.  Answer the following
+\item ({\bf 10 Points}) It is important to pick the right design and
+  architecture for a software application.  Answer the following
   questions about software architecture and design.
 
 \begin{enumerate}
 
 \item ({\bf 2 Points}) The Object Management Group (OMG) defined
-  something called the {\em unified modeling language} (UML).  What is
-  the UML?  Your response to this question should give two examples of
+  something called the Unified Modeling Language (UML).  What is the
+  UML?  Your response to this question should give two examples of
   diagrams that you can construct with the UML.
 
-\item ({\bf 2 Points}) The authors of the book {\em The Pragmatic
+\item ({\bf 4 Points}) The authors of the book {\em The Pragmatic
   Programmer: From Journeyman to Master} suggest that software
   developers should follow these two tips.  What do these tips mean?
   What are the efficiency and effectiveness trade-offs associated with
@@ -324,12 +324,12 @@ by providing a response for each part.
 
   \end{enumerate}
 
-\item ({\bf 2 Points}) For the final project in this course, you implemented a Twitter analytics system.  Please draw
-  one or more diagrams that clearly express the important characteristics of this system's architecture and/or design.
-
-\item ({\bf 4 Points}) Figure~\ref{fig:cs} gives a diagram that illustrates the {\em client/server} architecture at use
-  in a network file system (NFS).  Using this schematic as the main reference for this architecture, please give a
-  detailed explanation of two strengths and two weaknesses of a file system that operates in a client/server fashion.
+\item ({\bf 4 Points}) Figure~\ref{fig:cs} gives a diagram that
+  illustrates the Client/Server architecture at use in a network file
+  system (NFS).  Using this schematic as the main reference for this
+  architecture, please give a detailed explanation of two strengths
+  and two weaknesses of a file system that operates in a client/server
+  fashion.
 
 \end{enumerate}
 
@@ -343,6 +343,7 @@ by providing a response for each part.
 \vspace*{-.15in}
 \label{fig:cs}
 \end{figure}
+
 \newpage
 
 \item ({\bf 10 Points}) Defect testing is focused on finding the
@@ -350,7 +351,7 @@ by providing a response for each part.
   must execute the defect, infect the data state, and propagate to the
   program's output.  Answer the following questions about defect
   testing and use the code segment in Figure~\ref{pie_code} to answer
-  Part~\ref{need_code} of this question.
+  Part~\ref{need_code}.
 
 \begin{figure}[h]
 
@@ -387,12 +388,17 @@ by providing a response for each part.
 
 \begin{enumerate}
 
-\item \label{need_code} ({\bf 10 Points}) The general formula for calculating the kinetic energy of an object is \(
-  kinetic=\frac{1}{2}mass\times velocity^2 \).  Thus, the equation for the {\tt velocity} variable should be \(
-  velocity=sqrt(2 \times (kinetic / mass)) \).  At the {\tt [*]} position inside of the code, we see that the
-  calculation for {\tt velocity\_squared} includes a $3$ instead of a $2$.  Using the following scenarios, describe the
-  execution of the program in Figure~\ref{pie_code}.  Make sure that you clearly state whether the provided inputs will
-  isolate the defect located at the {\tt [*]} position inside of the source code written in the C programming language.
+\item \label{need_code} ({\bf 10 Points}) The general formula for
+  calculating the kinetic energy of an object is \(
+  kinetic=\frac{1}{2}mass\times velocity^2 \).  Thus, the equation for
+  the {\tt velocity} variable should be \( velocity=sqrt(2 \times
+  (kinetic / mass)) \).  At the {\tt [*]} position inside of the code,
+  we see that the calculation for {\tt velocity\_squared} includes a
+  $3$ instead of a $2$.  Using the following scenarios, describe the
+  execution of the program in Figure~\ref{pie_code}.  Make sure that
+  you clearly state whether the provided inputs will isolate the
+  defect located at the {\tt [*]} position inside of the C source
+  code.
 
 %\newpage
 
@@ -428,109 +434,76 @@ by providing a response for each part.
   complexity} of the software application in order to make decisions
   during the implementation, testing, and maintenance phases.  After
   defining the terms {\em cyclomatic complexity} and {\em
-    non-commented source statements}, please explain how to use these
+    non-commented source statements}, please explain how to use this
   metrics during the aforementioned phases.
   
 \item ({\bf 2 Points}) What are the similarities and differences
   between the implementation and testing of hardware and software?  Is
   it easier to test hardware or software?  Why?
 
-\item ({\bf 4 Points}) {\em Verification} and {\em validation} are two activities that software engineers commonly
-  perform during the construction of a software application.  In your response to this part of the question, please
-  define both of these terms and then for each term furnish a concrete example of an associated activity.
+\item ({\bf 4 Points}) Verification and validation are two activities
+  that software engineers commonly perform during the construction of
+  a software application.  In your response to this part of the
+  question, please define both of these terms and for each term
+  furnish a concrete example of an associated activity.
   
 \end{enumerate}
 
 \newpage
 
-\item ({\bf 10 Points}) The implementation and testing phases of the
-  software lifecycle enable software engineers to create real, working
-  systems.  Answer the following questions about the implementation
-  and testing of software.
+\item ({\bf 10 Points}) Mutation testing has emerged as one technique
+  that can be used during the verification and validation process.
+  Answer the following question about mutation testing and use the
+  definitions below to respond to Part~\ref{compare}.
+
+\begin{define}
+
+If P is a program to implement function F on domain D, then a test set
+T $ \subset $ D is adequate for P and F if ( $\forall$ programs Q ),
+$[Q(D) \neq F(D) ] \Rightarrow [(\exists t \in T) (Q(t) \neq F(t))]$.
+
+\label{adeq}
+\end{define}
+
+\begin{define}
+
+If P is a program to implement function F on domain D and $\Phi$ is a
+finite collection of programs, then a test set T $ \subset $ D is
+adequate for P relative to $\Phi$ if ( $\forall$ programs Q $\in \Phi$
+), $[Q(D) \neq F(D) ] \Rightarrow [(\exists t \in T) (Q(t) \neq
+  F(t))]$.
+
+\label{rel}
+\end{define}
 
 \begin{enumerate}
 
-  \item ({\bf 2 Points}) What is the meaning of the terms {\em fault}
-    and {\em failure}?
+\item \label{compare} ({\bf 3 Points}) Definitions~\ref{adeq} and
+  \ref{rel} provide a description of the terms {\em adequate} and {\em
+    relative adequate}.  Using these definitions, explore the
+  similarities and differences between the terms adequate and relative
+  adequate.  How are these definitions related to the application of
+  mutation testing to a Java program $P$ and a JUnit test suite $T$?
 
-  \item ({\bf 2 Points}) One guideline for implementing a high-quality
-    software application is to ``localize the input and the output.''
-    What is the meaning of this guideline?  Your response to this
-    question should also clearly explain whether you followed this
-    guideline during the implementation of your final project.
+\item \label{purpose} ({\bf 3 Points}) Explain the main reason for
+  performing mutation testing. Next, suppose that a given test suite
+  is able to kill $80\%$ of the syntactic mutants in the set $\Phi$.
+  Discuss how this could influence the remainder of the testing
+  effort.
 
-  \item ({\bf 3 Points}) One way to measure the quality of a test suite is to perform {\em coverage} analysis. What is
-    the purpose of coverage analysis? What are the similarities and differences between {\em branch} and {\em statement}
-    coverage?
+\item ({\bf 2 Points}) Suppose that you are developing a mutation
+  testing tool for relational operators.  If your tool encountered the
+  statement {\tt if(num\_deposits > MAX\_DEPOSITS)}, what syntactic
+  mutants would you generate to populate the set $\Phi$?
 
-  \item ({\bf 3 Points}) You can also measure the quality of a test suite with {\em mutation} analysis. What is the
-    purpose of this analysis technique? What are the strengths and weaknesses?
-
-  % \item ({\bf 2 Points}) Software testing is traditionally seen as
-  %   having two distinct purposes.  Please state and define the two
-  %   purposes of software testing.
-
-  % \item ({\bf 4 Points}) It is possible to divide all of the faults
-  %   found in a software application into two different categories --
-  %   what are they?  After defining each fault category, your response
-  %   to this question should suggest a type of analysis or testing that
-  %   can find and resolve each type of software fault.
+\item ({\bf 2 Points}) Mutation testing can be a very powerful
+  technique during verification and validation.  However, it also has
+  several important limitations.  Discuss two or three of the major
+  limitations of mutation testing.  Your response should provide the
+  name of one or two mutation testing tools that are available for the
+  Java programming language.
 
 \end{enumerate}
-
-%% \item ({\bf 10 Points}) Mutation testing has emerged as one technique
-%%   that can be used during the verification and validation process.
-%%   Answer the following question about mutation testing and use the
-%%   definitions below to respond to Part~\ref{compare}.
-
-%% \begin{define}
-
-%% If P is a program to implement function F on domain D, then a test set
-%% T $ \subset $ D is adequate for P and F if ( $\forall$ programs Q ),
-%% $[Q(D) \neq F(D) ] \Rightarrow [(\exists t \in T) (Q(t) \neq F(t))]$.
-
-%% \label{adeq}
-%% \end{define}
-
-%% \begin{define}
-
-%% If P is a program to implement function F on domain D and $\Phi$ is a
-%% finite collection of programs, then a test set T $ \subset $ D is
-%% adequate for P relative to $\Phi$ if ( $\forall$ programs Q $\in \Phi$
-%% ), $[Q(D) \neq F(D) ] \Rightarrow [(\exists t \in T) (Q(t) \neq
-%%   F(t))]$.
-
-%% \label{rel}
-%% \end{define}
-
-%% \begin{enumerate}
-
-%% \item \label{compare} ({\bf 3 Points}) Definitions~\ref{adeq} and
-%%   \ref{rel} provide a description of the terms {\em adequate} and {\em
-%%     relative adequate}.  Using these definitions, explore the
-%%   similarities and differences between the terms adequate and relative
-%%   adequate.  How are these definitions related to the application of
-%%   mutation testing to a Java program $P$ and a JUnit test suite $T$?
-
-%% \item \label{purpose} ({\bf 3 Points}) Explain the main reason for
-%%   performing mutation testing. Next, suppose that a given test suite
-%%   is able to kill $80\%$ of the syntactic mutants in the set $\Phi$.
-%%   Discuss how this could influence the remainder of the testing
-%%   effort.
-
-%% \item ({\bf 2 Points}) Suppose that you are developing a mutation
-%%   testing tool for relational operators.  If your tool encountered the
-%%   statement {\tt if(num\_deposits > MAX\_DEPOSITS)}, what syntactic
-%%   mutants would you generate to populate the set $\Phi$?
-
-%% \item ({\bf 2 Points}) Mutation testing can be a very powerful
-%%   technique during verification and validation.  However, it also has
-%%   several important limitations.  Discuss two or three of the major
-%%   limitations of mutation testing.  Your response should provide the
-%%   name of one or two mutation testing tools that are available for the
-%%   Java programming language.
-
-%% \end{enumerate}
 
 \newpage
 
@@ -541,7 +514,7 @@ by providing a response for each part.
 
 \begin{enumerate}
 
-  \item ({\bf 4 Points}) Implement a data generator that takes a list
+  \item ({\bf 3 Points}) Implement a data generator that takes a list
     of numbers as input and then produces a list of lists as output.
     For instance, please consider the following outputs for the input
     list 1 2 3 4.  From this example, you can see that the data
@@ -567,25 +540,24 @@ by providing a response for each part.
 
   \end{enumerate}
 
-  \item ({\bf 3 Points}) Provide a test plan for the data generator that you implemented in Part 10a of this question.
-    Using natural language and not source code, your plan should identify the inputs and anticipated output for each of
-    the tests.  You should also clearly explain why you decided to include each of the test cases into the overall plan.
+  \item ({\bf 3 Points}) Provide a test plan for the data generator
+    that you implemented in Part 10a of this question.  Your plan
+    should identify the inputs and anticipated output for each of the
+    tests.  You should also clearly explain why you decided to include
+    each of the test cases into the overall plan.
 
-  % \item ({\bf 2 Points}) Jeffrey Voas poses the question ``can clean
-  %   pipes produce dirty water?'' in an article of the same title from
-  %   IEEE Software.  What is the meaning behind the concepts of ``clean
-  %   pipes'' and ``dirty water''?  In the context of software
-  %   engineering, what is your response to the question raised by Voas?
+  \item ({\bf 2 Points}) Jeffrey Voas poses the question ``can clean
+    pipes produce dirty water?'' in an article of the same title from
+    IEEE Software.  What is the meaning behind the concepts of ``clean
+    pipes'' and ``dirty water''?  In the context of software
+    engineering, what is your response to the question raised by Voas?
 
-  \item ({\bf 3 Points}) Software engineers commonly ask themselves the question ``when should we stop testing our
-    software?''  Please fully explain two valid responses to this question.
-
-  %% \item ({\bf 2 Points}) The software engineers at Google recently
-  %%   found a defect in the traditional implementation of the binary
-  %%   search.  What was the defect in this algorithm?  Your response to
-  %%   this question should clearly explain the situation(s) in which
-  %%   this fault would manifest itself as a failing execution of a Java
-  %%   program.
+  \item ({\bf 2 Points}) The software engineers at Google recently
+    found a defect in the traditional implementation of the binary
+    search.  What was the defect in this algorithm?  Your response to
+    this question should clearly explain the situation(s) in which
+    this fault would manifest itself as a failing execution of a Java
+    program.
 
 \end{enumerate}
 

@@ -25,10 +25,9 @@ public class TeamAssignment
 	    put(15, "Mong");
 	    put(16, "Mukherjee");
 	    put(17, "Regel");
-	    put(18, "Schweitzer");
-	    put(19, "Wechter");
-	    put(20, "Weisman");
-	    put(21, "Weyant");
+	    put(18, "Wechter");
+	    put(19, "Weisman");
+	    put(20, "Weyant");
 	}};
 
     public static void main(String[] args) {
@@ -36,7 +35,7 @@ public class TeamAssignment
 	ArrayList<Integer> students = new ArrayList<Integer>();
 
 	// populate the arraylist with the integers
-	for(int i = 1; i <= 21; i++) {
+	for(int i = 1; i <= 20; i++) {
 	    Integer I = new Integer(i);
 	    students.add(I);
 	}
@@ -61,7 +60,7 @@ public class TeamAssignment
 	int team = 1;
 	for(Integer studentToday : studentsTodaysOrdering) {
 
-		if(i % 3 == 0) {
+		if(i % 5 == 0) {
 		
 			System.out.println();
 			System.out.println("Team " + team);
